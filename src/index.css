@@ -1,0 +1,66 @@
+:root {
+  --text-color: #07000A;
+  --background-color: #ECE5F0;
+  --primary-color: #582A72;
+  --primary-color-light: #916DA5;
+  --primary-color-dark: #2A053E;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 10px;
+}
+
+header, footer {
+  background-color: var(--primary-color-light);
+  border: 2px solid var(--primary-color-dark);
+  padding: 10px;
+  font-weight: bold;
+}
+
+header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+footer {
+  text-align: center;
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+
+nav {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding: 10px;
+  align-content: center;
+}
+
+main {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 2px var(--primary-color-dark);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
