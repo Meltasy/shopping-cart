@@ -1,4 +1,5 @@
 import App from './App.jsx'
+import Home from './components/Home.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 
 const routes = [
@@ -9,7 +10,7 @@ const routes = [
   },
   {
     path: '/:name',
-    element: <App />,
+    element: <Home />,
   },
 ]
 

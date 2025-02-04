@@ -64,3 +64,15 @@ ul {
   display: flex;
   justify-content: space-evenly;
 }
+
+button,
+input {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  color: var(--background-color);
+  background-color: var(--primary-color-dark);
+  padding: 5px 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;  
+}

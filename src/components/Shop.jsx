@@ -1,13 +1,10 @@
-import ProductItems from "./ProductItems"
-
-const Shop = () => {
+const Shop = ({ productItems }) => {
 
   return (
-      <div>
-        <h1>Atelier</h1>
-        <ProductItems />
-      </div>
-    )
+    <div>
+      <h1>Galeries Libellule</h1>
+    </div>
+  )
 }
 
 export default Shop
