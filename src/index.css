@@ -53,8 +53,20 @@ main {
 
 h1 {
   font-size: 3rem;
+  color: var(--primary-color-dark);
+}
+
+a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primary-color-dark);
+}
+
+a.active {
   color: var(--primary-color);
-  text-shadow: 2px 2px 2px var(--primary-color-dark);
+  background-color: var(--background-color);
+  padding: 10px 20px;
 }
 
 ul {
@@ -65,14 +77,12 @@ ul {
   justify-content: space-evenly;
 }
 
-button,
-input {
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  color: var(--background-color);
-  background-color: var(--primary-color-dark);
-  padding: 5px 10px;
-  border: 2px solid var(--primary-color);
-  border-radius: 5px;  
+.quantityCart {
+  color: var(--primary-color-dark);
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color-dark);
+  padding: 5px;
+  max-width: 30px;
+  border-radius: 30px;
+  justify-self: flex-end;
 }

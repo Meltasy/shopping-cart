@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const DetailItem = ({ showDetail, itemDetail, children }) => {
+const DetailItem = ({ showDetail, itemId, title, price, imageUrl, description, children }) => {
   const ref = useRef()
 
   useEffect(() => {
@@ -15,10 +15,10 @@ const DetailItem = ({ showDetail, itemDetail, children }) => {
   return (
     <>
       <dialog ref={ref}>
-        <div key={itemDetail.id} className='itemDetail'>
-          <h2>{itemDetail.title} €{itemDetail.price}</h2>
-          <img src={itemDetail.image} alt=' ' />
-          <p>{itemDetail.description}</p>
+        <div key={itemId} className='itemDetail'>
+          <h2>{title} €{price}</h2>
+          <img src={imageUrl} alt=' ' />
+          <p>{description}</p>
           {children}
         </div>
       </dialog>
