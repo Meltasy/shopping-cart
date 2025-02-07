@@ -1,13 +1,13 @@
-import ItemCard from './ItemCard'
+import ShopItem from '../components/ShopItem'
 
-const Products = ({ productItems, handleSubmit }) => {
+const Shop = ({ productItems, handleSubmit }) => {
 
   return (
     <div>
       <h1>Atelier</h1>
       <div className='productItems'>
         {productItems.map(item => (
-          <ItemCard
+          <ShopItem
             key={item.id}
             itemId={item.id}
             title={item.title}
@@ -22,4 +22,4 @@ const Products = ({ productItems, handleSubmit }) => {
   )
 }
 
-export default Products
+export default Shop

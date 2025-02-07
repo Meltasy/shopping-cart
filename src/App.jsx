@@ -1,12 +1,13 @@
-import Home from './components/Home'
+import ShoppingCartProvider from './context/ShoppingCartContext'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-    <Home />
-    </>
+    <ShoppingCartProvider>
+      <Home />
+    </ShoppingCartProvider>
   )
 }
 

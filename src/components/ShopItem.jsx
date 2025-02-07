@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import DetailItem from './DetailItem'
 
-const ItemCard = ({ itemId, title, price, imageUrl, description, onSubmit }) => {
+const ShopItem = ({ itemId, title, price, imageUrl, description, onSubmit }) => {
   const [showDetail, setShowDetail] = useState(false)
   const [value, setValue] = useState(0)
 
@@ -61,4 +61,4 @@ const ItemCard = ({ itemId, title, price, imageUrl, description, onSubmit }) => 
   )
 }
 
-export default ItemCard
+export default ShopItem

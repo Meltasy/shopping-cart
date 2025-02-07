@@ -1,6 +1,6 @@
 import App from './App.jsx'
-import Home from './components/Home.jsx'
-import ErrorPage from './components/ErrorPage.jsx'
+import Home from './pages/Home.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 const routes = [
   {
