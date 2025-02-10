@@ -36,8 +36,7 @@ const ShopItem = ({ itemId, title, price, imageUrl, description, onSubmit }) => 
         onSubmit={(e) => {
           e.preventDefault()
           if (value === 0) return
-          onSubmit(itemId, value)
-          console.log(itemId, value)
+          onSubmit(itemId, price, value)
           setValue(0)
         }}>
         <label htmlFor='quantity'>Quantity:</label>

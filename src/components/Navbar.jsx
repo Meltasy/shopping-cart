@@ -1,22 +1,20 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
-const Navbar = ({ quantityCart }) => {
+const Navbar = ({ quantityCart, handleShowCart }) => {
 
   return (
     <nav>
       <ul>
         <li>
-          <NavLink to='../intro'>Galeries Libellule</NavLink>
+          <NavLink to='../home'>Galeries Libellule</NavLink>
         </li>
         <li>
           <NavLink to='../shop'>Atelier</NavLink>
         </li>
       </ul>
-      <NavLink to='../cart'>
-        <button>
-          <div className='quantityCart'>{quantityCart}</div>
-        </button>
-      </NavLink>
+      <button onClick={() => handleShowCart(true)}>
+        <div className='quantityCart'>{quantityCart}</div>
+      </button>
     </nav>
   )
 }

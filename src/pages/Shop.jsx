@@ -1,6 +1,6 @@
 import ShopItem from '../components/ShopItem'
 
-const Shop = ({ productItems, handleSubmit }) => {
+const Shop = ({ productItems, handleAdd }) => {
 
   return (
     <div>
@@ -14,7 +14,7 @@ const Shop = ({ productItems, handleSubmit }) => {
             price={item.price}
             imageUrl={item.image}
             description={item.description}
-            onSubmit={handleSubmit}
+            onSubmit={handleAdd}
           />
         ))}
       </div>
