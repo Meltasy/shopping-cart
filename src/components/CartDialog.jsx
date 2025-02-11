@@ -7,15 +7,17 @@ const CartDialog = ({ productItems, addToCart, totalCost, handleDelete, showCart
   useEffect(() => {
     if (!showCart) { return }
     const dialog = ref.current
-    dialog.show()
+    dialog.showModal()
     return () => {
       dialog.close()
     }
   }, [showCart])
 
   return (
-    <dialog ref={ref} className='cartDialog'>
-      <h1>Panier</h1>
+    <dialog ref={ref}>
+      <div class='closeBtn'>
+        <button onClick={() => handleShowCart(false)}>X</button>
+      </div>
       <div className='cartItems'>
         {addToCart.map(item => (
           <CartItem
@@ -28,10 +30,9 @@ const CartDialog = ({ productItems, addToCart, totalCost, handleDelete, showCart
           />
         ))}
       </div>
-      <div>
+      <div className='totalCost'>
         <h2>Total: €{totalCost}</h2>
       </div>
-      <button onClick={() => handleShowCart(false)}>X</button>
     </dialog>
   )
 }

@@ -5,12 +5,14 @@ const CartItem = ({ itemId, price, quantity, productItems, handleDelete }) => {
 
   return (
     <div key={item.id} className='itemCart'>
-      <img src={item.image} alt=' ' width={100} height={100}/>
-      <div>
-        <h4>{item.title} €{price}</h4>
-        <h3>x{quantity} €{totalCost}</h3>
+      <div className='details'>
+        <p>{item.title}</p>
+        <h4>€{price}</h4>
+        <h3>x {quantity}</h3>
+        <h4>€{totalCost}</h4>
       </div>
-      <button onClick={() => handleDelete(itemId, price, quantity)}>Delete</button>
+      <img src={item.image} alt=' ' />
+      <button onClick={() => handleDelete(itemId, price, quantity)}>X</button>
     </div>
   )
 }

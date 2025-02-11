@@ -1,3 +1,5 @@
+/* ShopItem.jsx */
+
 .productItems {
   display: flex;
   flex-wrap: wrap;
@@ -5,8 +7,6 @@
   padding: 10px;
   justify-content: center;
 }
-
-/* ShopItem.jsx */
 
 .item {
   width: 300px;
@@ -90,14 +90,19 @@ dialog {
   border-radius: 10px;
 }
 
+/* CartItem.jsx */
+
+.closeBtn,
+.totalCost {
+  text-align: end;
+}
+
 .cartItems {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 10px;
 }
-
-/* CartItem.jsx */
 
 .itemCart {
   max-width: 600px;
@@ -108,12 +113,18 @@ dialog {
   border: 2px solid var(--primary-color-dark);
   border-radius: 10px;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
 }
 
+.details {
+  max-width: 250px;
+}
+
 .itemCart img {
-  max-width: 200px;
-  max-height: 250px;
+  max-width: 150px;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
