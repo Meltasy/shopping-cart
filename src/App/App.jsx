@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import Navbar from './components/Navbar.jsx'
-import Home from './pages/Home.jsx'
-import Shop from './pages/Shop.jsx'
-import CartDialog from './components/CartDialog.jsx'
+import Navbar from '../components/Navbar/Navbar'
+import Home from '../pages/Home/Home'
+import Shop from '../pages/Shop/Shop'
+import Cart from '../pages/Cart/Cart'
 import './App.css'
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   const [addToCart, setAddToCart] = useState([])
   const [quantityCart, setQuantityCart] = useState(0)
   const [totalCost, setTotalCost] = useState(0)
-  const [showCart, setShowCart] = useState(false)
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products', { mode: 'cors' })
@@ -34,11 +33,6 @@ function App() {
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Network error</p>
-
-  function handleShowCart(boolean) {
-    if (boolean === true) { setShowCart(true) }
-    else if (boolean === false) { setShowCart(false) }
-  }
 
   function handleAdd(itemId, price, quantity) {
     if (addToCart.find(aTC => aTC.id === itemId)) {
@@ -65,21 +59,20 @@ function App() {
   
   return (
     <>
-      <Navbar quantityCart={quantityCart} handleShowCart={handleShowCart} />
+      <Navbar quantityCart={quantityCart} />
       <main>
         {name === 'shop' ? (
           <Shop productItems={productItems} handleAdd={handleAdd} />
+        ) : name === 'cart' ? (
+          <Cart
+            productItems={productItems}
+            addToCart={addToCart}
+            totalCost={totalCost}
+            handleDelete={handleDelete}
+          />
         ) : (
           <Home productItems={productItems} />
         )}
-      <CartDialog
-        productItems={productItems}
-        addToCart={addToCart}
-        totalCost={totalCost}
-        handleDelete={handleDelete}
-        showCart={showCart}
-        handleShowCart={handleShowCart}
-      />
       </main>
     </>
   )

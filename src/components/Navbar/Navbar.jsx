@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const Navbar = ({ quantityCart, handleShowCart }) => {
+const Navbar = ({ quantityCart }) => {
 
   return (
     <nav>
@@ -9,12 +9,14 @@ const Navbar = ({ quantityCart, handleShowCart }) => {
           <NavLink to='../home'>Galeries Libellule</NavLink>
         </li>
         <li>
-          <NavLink to='../shop'>Atelier</NavLink>
+          <NavLink to='../shop'>Shop</NavLink>
         </li>
       </ul>
-      <button onClick={() => handleShowCart(true)}>
-        <div className='quantityCart'>{quantityCart}</div>
-      </button>
+      <NavLink to='../cart'>
+        <button>
+          <div className='quantityCart'>{quantityCart}</div>
+        </button>
+      </NavLink>
     </nav>
   )
 }

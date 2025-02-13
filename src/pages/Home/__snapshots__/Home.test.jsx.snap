@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > renders galeries libellule 1`] = `
+<div>
+  <div>
+    <h1>
+      Galeries Libellule
+    </h1>
+  </div>
+</div>
+`;

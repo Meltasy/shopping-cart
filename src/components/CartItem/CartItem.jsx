@@ -7,9 +7,9 @@ const CartItem = ({ itemId, price, quantity, productItems, handleDelete }) => {
     <div key={item.id} className='itemCart'>
       <div className='details'>
         <p>{item.title}</p>
-        <h4>€{price}</h4>
+        <h4>€{price ? price.toFixed(2) : '0.00'}</h4>
         <h3>x {quantity}</h3>
-        <h4>€{totalCost}</h4>
+        <h4>€{totalCost ? totalCost.toFixed(2): '0.00'}</h4>
       </div>
       <img src={item.image} alt=' ' />
       <button onClick={() => handleDelete(itemId, price, quantity)}>X</button>

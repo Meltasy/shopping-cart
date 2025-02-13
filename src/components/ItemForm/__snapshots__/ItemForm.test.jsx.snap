@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop item form component > renders shop item form 1`] = `
+<div>
+  <form>
+    <label
+      for="quantity"
+    >
+      Quantity:
+    </label>
+    <div>
+      <button
+        type="button"
+      >
+        -
+      </button>
+      <input
+        id="quantity"
+        max="10"
+        min="1"
+        name="quantity"
+        pattern="^\\d+$"
+        type="text"
+        value="0"
+      />
+      <button
+        type="button"
+      >
+        +
+      </button>
+    </div>
+    <button
+      type="submit"
+    >
+      Add to Cart
+    </button>
+  </form>
+</div>
+`;

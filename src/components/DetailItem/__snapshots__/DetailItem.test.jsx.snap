@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop item detail component > renders shop item detail dialog 1`] = `
+<div>
+  <dialog>
+    <div
+      class="itemDetail"
+    >
+      <h2>
+         €
+        0.00
+      </h2>
+      <img
+        alt=" "
+      />
+      <p />
+    </div>
+  </dialog>
+</div>
+`;

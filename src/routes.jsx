@@ -1,4 +1,4 @@
-import App from './App.jsx'
+import App from './App/App'
 import ErrorPage from './pages/ErrorPage.jsx'
 
 const routes = [

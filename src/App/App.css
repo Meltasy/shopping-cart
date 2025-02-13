@@ -92,11 +92,6 @@ dialog {
 
 /* CartItem.jsx */
 
-.closeBtn,
-.totalCost {
-  text-align: end;
-}
-
 .cartItems {
   display: flex;
   flex-direction: column;
