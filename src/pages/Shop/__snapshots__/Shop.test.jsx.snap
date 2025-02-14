@@ -1,0 +1,225 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop component > renders shop products 1`] = `
+<div>
+  <div>
+    <h1>
+      Products
+    </h1>
+    <div
+      class="productItems"
+    >
+      <div
+        class="item"
+      >
+        <img
+          alt=" "
+          src="fakeImageA.jpg"
+        />
+        <h3>
+          Fake product A
+           €
+          35.50
+        </h3>
+        <button>
+          Show Detail
+        </button>
+        <dialog>
+          <div
+            class="itemDetail"
+          >
+            <h2>
+              Fake product A
+               €
+              35.50
+            </h2>
+            <img
+              alt=" "
+              src="fakeImageA.jpg"
+            />
+            <p>
+              This is fake product A.
+            </p>
+            <button>
+              Back to Shop
+            </button>
+          </div>
+        </dialog>
+        <form>
+          <label
+            for="quantity"
+          >
+            Quantity:
+          </label>
+          <div>
+            <button
+              type="button"
+            >
+              -
+            </button>
+            <input
+              id="quantity"
+              max="10"
+              min="1"
+              name="quantity"
+              pattern="^\\d+$"
+              type="text"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              +
+            </button>
+          </div>
+          <button
+            type="submit"
+          >
+            Add to Cart
+          </button>
+        </form>
+      </div>
+      <div
+        class="item"
+      >
+        <img
+          alt=" "
+          src="fakeImageB.jpg"
+        />
+        <h3>
+          Fake product B
+           €
+          57.99
+        </h3>
+        <button>
+          Show Detail
+        </button>
+        <dialog>
+          <div
+            class="itemDetail"
+          >
+            <h2>
+              Fake product B
+               €
+              57.99
+            </h2>
+            <img
+              alt=" "
+              src="fakeImageB.jpg"
+            />
+            <p>
+              This is fake product B.
+            </p>
+            <button>
+              Back to Shop
+            </button>
+          </div>
+        </dialog>
+        <form>
+          <label
+            for="quantity"
+          >
+            Quantity:
+          </label>
+          <div>
+            <button
+              type="button"
+            >
+              -
+            </button>
+            <input
+              id="quantity"
+              max="10"
+              min="1"
+              name="quantity"
+              pattern="^\\d+$"
+              type="text"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              +
+            </button>
+          </div>
+          <button
+            type="submit"
+          >
+            Add to Cart
+          </button>
+        </form>
+      </div>
+      <div
+        class="item"
+      >
+        <img
+          alt=" "
+          src="fakeImageC.jpg"
+        />
+        <h3>
+          Fake product C
+           €
+          7.50
+        </h3>
+        <button>
+          Show Detail
+        </button>
+        <dialog>
+          <div
+            class="itemDetail"
+          >
+            <h2>
+              Fake product C
+               €
+              7.50
+            </h2>
+            <img
+              alt=" "
+              src="fakeImageC.jpg"
+            />
+            <p>
+              This is fake product C.
+            </p>
+            <button>
+              Back to Shop
+            </button>
+          </div>
+        </dialog>
+        <form>
+          <label
+            for="quantity"
+          >
+            Quantity:
+          </label>
+          <div>
+            <button
+              type="button"
+            >
+              -
+            </button>
+            <input
+              id="quantity"
+              max="10"
+              min="1"
+              name="quantity"
+              pattern="^\\d+$"
+              type="text"
+              value="0"
+            />
+            <button
+              type="button"
+            >
+              +
+            </button>
+          </div>
+          <button
+            type="submit"
+          >
+            Add to Cart
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

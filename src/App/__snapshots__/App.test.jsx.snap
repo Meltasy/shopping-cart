@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > renders App component 1`] = `
+<div>
+  <p>
+    Loading...
+  </p>
+</div>
+`;
+
+exports[`App component > renders App component 2`] = `
+<div>
+  <p>
+    Loading...
+  </p>
+</div>
+`;

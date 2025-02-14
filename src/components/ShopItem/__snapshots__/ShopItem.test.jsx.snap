@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Shop item component > renders shop product items 1`] = `
+exports[`Shop item component > renders shop product item 1`] = `
 <div>
   <div
     class="item"

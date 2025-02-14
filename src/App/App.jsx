@@ -11,7 +11,7 @@ function App() {
   const [productItems, setProductItems] = useState(null)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [addToCart, setAddToCart] = useState([])
+  const [cartItems, setCartItems] = useState([])
   const [quantityCart, setQuantityCart] = useState(0)
   const [totalCost, setTotalCost] = useState(0)
 
@@ -35,9 +35,9 @@ function App() {
   if (error) return <p>Network error</p>
 
   function handleAdd(itemId, price, quantity) {
-    if (addToCart.find(aTC => aTC.id === itemId)) {
+    if (cartItems.find(aTC => aTC.id === itemId)) {
       setTotalCost(totalCost + price * quantity)
-      setAddToCart(addToCart.map(item => {
+      setCartItems(cartItems.map(item => {
         if (item.id === itemId) {
           return { ...item, quantity: item.quantity + quantity }
         } else {
@@ -45,14 +45,14 @@ function App() {
         }
       }))
     } else {
-      setAddToCart([ ...addToCart, { id: itemId, price: price, quantity: quantity } ])
+      setCartItems([ ...cartItems, { id: itemId, price: price, quantity: quantity } ])
       setQuantityCart(quantityCart + 1)
       setTotalCost(totalCost + price * quantity)
     }
   }
 
   function handleDelete(itemId, price, quantity) {
-    setAddToCart(addToCart.filter(aTC => aTC.id !== itemId))
+    setCartItems(cartItems.filter(aTC => aTC.id !== itemId))
     setQuantityCart(quantityCart - 1)
     setTotalCost(totalCost - price * quantity)
   }
@@ -66,7 +66,7 @@ function App() {
         ) : name === 'cart' ? (
           <Cart
             productItems={productItems}
-            addToCart={addToCart}
+            cartItems={cartItems}
             totalCost={totalCost}
             handleDelete={handleDelete}
           />

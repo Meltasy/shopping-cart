@@ -21,7 +21,7 @@ describe('Shop item detail component', () => {
         showDetail={true}
         title='Fake product'
         price={35.50}
-        imageUrl='fakeProduct.jpg'
+        imageUrl='fakeImage.jpg'
         description='This is a fake product.'
       />
     )
@@ -40,7 +40,7 @@ describe('Shop item detail component', () => {
 
   it('renders correct item details when dialog is open', () => {
     expect(screen.getByRole('heading', { hidden: true, level: 2 })).toHaveTextContent('Fake product €35.50')
-    expect(screen.getByRole('img', { hidden: true })).toHaveAttribute('src', 'fakeProduct.jpg')
+    expect(screen.getByRole('img', { hidden: true })).toHaveAttribute('src', 'fakeImage.jpg')
     expect(screen.getByText('This is a fake product.')).toBeInTheDocument()
   })
 })

@@ -1,12 +1,12 @@
 import CartItem from '../../components/CartItem/CartItem'
 
-const Cart = ({ productItems, addToCart, totalCost, handleDelete }) => {
+const Cart = ({ productItems, cartItems, totalCost, handleDelete }) => {
 
   return (
     <div>
-      <h1>Panier</h1>
+      <h1>Cart</h1>
       <div className='cartItems'>
-        {addToCart.map(item => (
+        {cartItems.map(item => (
           <CartItem
             key={item.id}
             itemId={item.id}
@@ -18,7 +18,7 @@ const Cart = ({ productItems, addToCart, totalCost, handleDelete }) => {
         ))}
       </div>
       <div>
-        <h2>Total: €{totalCost.toFixed(2)}</h2>
+        <h2>Total: €{totalCost ? totalCost.toFixed(2): '0.00'}</h2>
       </div>
     </div>
   )

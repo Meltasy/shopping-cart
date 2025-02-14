@@ -9,7 +9,7 @@ exports[`Cart item component > renders cart product items 1`] = `
       class="details"
     >
       <p>
-        Fake Product A
+        Fake product A
       </p>
       <h4>
         €

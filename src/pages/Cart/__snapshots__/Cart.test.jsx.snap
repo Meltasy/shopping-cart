@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cart component > renders cart products 1`] = `
+<div>
+  <div>
+    <h1>
+      Cart
+    </h1>
+    <div
+      class="cartItems"
+    >
+      <div
+        class="itemCart"
+      >
+        <div
+          class="details"
+        >
+          <p>
+            Fake product A
+          </p>
+          <h4>
+            €
+            35.50
+          </h4>
+          <h3>
+            x 
+            3
+          </h3>
+          <h4>
+            €
+            106.50
+          </h4>
+        </div>
+        <img
+          alt=" "
+          src="fakeImageA.jpg"
+        />
+        <button>
+          X
+        </button>
+      </div>
+      <div
+        class="itemCart"
+      >
+        <div
+          class="details"
+        >
+          <p>
+            Fake product C
+          </p>
+          <h4>
+            €
+            7.50
+          </h4>
+          <h3>
+            x 
+            5
+          </h3>
+          <h4>
+            €
+            37.50
+          </h4>
+        </div>
+        <img
+          alt=" "
+          src="fakeImageC.jpg"
+        />
+        <button>
+          X
+        </button>
+      </div>
+    </div>
+    <div>
+      <h2>
+        Total: €
+        0.00
+      </h2>
+    </div>
+  </div>
+</div>
+`;

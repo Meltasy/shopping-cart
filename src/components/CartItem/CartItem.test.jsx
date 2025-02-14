@@ -1,11 +1,11 @@
-import { vi, describe, it, expect } from 'vitest';
+import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react'
-import CartItem from './CartItem';
 import userEvent from '@testing-library/user-event';
+import CartItem from './CartItem';
 
 const mockProductItems = [
-  { id: '123', title: 'Fake Product A', image: 'fakeImageA.jpg' },
-  { id: '321', title: 'Fake Product B', image: 'fakeImageB.jpg' },
+  { id: '123', title: 'Fake product A', image: 'fakeImageA.jpg' },
+  { id: '321', title: 'Fake product B', image: 'fakeImageB.jpg' },
 ]
 
 describe('Cart item component', () => {
@@ -17,10 +17,10 @@ describe('Cart item component', () => {
   it('renders correct cart item details when found', () => {
     render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems}/>)
     screen.debug()
-    expect(screen.getByText('Fake Product A')).toBeInTheDocument()
-    expect(screen.getAllByRole('heading', { hidden: true, level: 4 })[0]).toHaveTextContent('€35.50')
-    expect(screen.getByRole('heading', { hidden: true, level: 3 })).toHaveTextContent('3')
-    expect(screen.getAllByRole('heading', { hidden: true, level: 4 })[1]).toHaveTextContent('€106.50')
+    expect(screen.getByText('Fake product A')).toBeInTheDocument()
+    expect(screen.getAllByRole('heading', { level: 4 })[0]).toHaveTextContent('€35.50')
+    expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent('3')
+    expect(screen.getAllByRole('heading', { level: 4 })[1]).toHaveTextContent('€106.50')
     expect(screen.getByRole('img')).toHaveAttribute('src', 'fakeImageA.jpg')
   })
 
@@ -32,14 +32,17 @@ describe('Cart item component', () => {
 })
 
 describe('Cart item component calls handleDelete as expected',() => {
+  const mockDelete = vi.fn()
+
+  beforeEach(() => {
+    render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
+  })
+
   it('renders delete button with the correct text', () => {
-    render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems}/>)
     expect(screen.getByRole('button').textContent).toMatch('X')
   })
     
   it('calls handleDelete with correct arguments when button clicked', async () => {
-    const mockDelete = vi.fn()
-    render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
     const user = userEvent.setup()
     const deleteBtn = screen.getByRole('button', { name: 'X'})
     await user.click(deleteBtn)
