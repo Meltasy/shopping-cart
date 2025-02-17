@@ -1,11 +1,19 @@
 import CartItem from '../../components/CartItem/CartItem'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+`
 
 const Cart = ({ productItems, cartItems, totalCost, handleDelete }) => {
 
   return (
     <div>
       <h1>Cart</h1>
-      <div className='cartItems'>
+      <Wrapper>
         {cartItems.map(item => (
           <CartItem
             key={item.id}
@@ -16,7 +24,7 @@ const Cart = ({ productItems, cartItems, totalCost, handleDelete }) => {
             handleDelete={handleDelete}
           />
         ))}
-      </div>
+      </Wrapper>
       <div>
         <h2>Total: €{totalCost ? totalCost.toFixed(2): '0.00'}</h2>
       </div>

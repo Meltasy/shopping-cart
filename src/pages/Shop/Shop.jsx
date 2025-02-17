@@ -1,11 +1,20 @@
 import ShopItem from '../../components/ShopItem/ShopItem'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+`
 
 const Shop = ({ productItems, handleAdd }) => {
 
   return (
     <div>
       <h1>Products</h1>
-      <div className='productItems'>
+      <Wrapper>
         {productItems.map(item => (
           <ShopItem
             key={item.id}
@@ -17,7 +26,7 @@ const Shop = ({ productItems, handleAdd }) => {
             handleAdd={handleAdd}
           />
         ))}
-      </div>
+      </Wrapper>
     </div>
   )
 }

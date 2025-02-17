@@ -1,10 +1,16 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import styled from 'styled-components';
+import GlobalStyle from '../globalStyles'
 import Navbar from '../components/Navbar/Navbar'
 import Home from '../pages/Home/Home'
 import Shop from '../pages/Shop/Shop'
 import Cart from '../pages/Cart/Cart'
-import './App.css'
+
+const Wrapper = styled.main`
+  padding: 2.5rem;
+  margin-top: 4.5rem;
+`
 
 function App() {
   const { name } = useParams()
@@ -59,8 +65,9 @@ function App() {
   
   return (
     <>
+      <GlobalStyle />
       <Navbar quantityCart={quantityCart} />
-      <main>
+      <Wrapper>
         {name === 'shop' ? (
           <Shop productItems={productItems} handleAdd={handleAdd} />
         ) : name === 'cart' ? (
@@ -73,7 +80,7 @@ function App() {
         ) : (
           <Home productItems={productItems} />
         )}
-      </main>
+      </Wrapper>
     </>
   )
 }

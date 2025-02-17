@@ -1,4 +1,34 @@
 import { useState } from 'react'
+import styled from 'styled-components';
+
+const StyledForm = styled.form`
+  display: grid;
+  background-color: var(--primary-color-light);
+  padding: 20px 30px;
+  border-radius: 10px;
+`
+
+const StyledButton = styled.button`
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  color: var(--background-color);
+  background-color: var(--primary-color-dark);
+  padding: 5px 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  margin: 5px 0;
+`
+
+const StyledInput = styled(StyledButton)`
+  max-width: 50px;
+`
+
+const StyledLabel = styled.label`
+  font-weight: 700;
+  font-size: 1.2rem;
+  max-width: 50px;
+`
 
 const ItemForm = ({ itemId, price, onSubmit }) => {
   const [value, setValue] = useState(0)
@@ -17,17 +47,17 @@ const ItemForm = ({ itemId, price, onSubmit }) => {
 
   return (
     <>
-      <form
+      <StyledForm
         onSubmit={(e) => {
         e.preventDefault()
         if (value === 0) return
         onSubmit(itemId, price, value)
         setValue(0)
       }}>
-      <label htmlFor='quantity'>Quantity:</label>
+      <StyledLabel htmlFor='quantity'>Quantity:</StyledLabel>
       <div>
-        <button type='button' onClick={handleDecrease}>-</button>
-          <input
+        <StyledButton type='button' onClick={handleDecrease}>-</StyledButton>
+          <StyledInput as='input'
             type='text'
             id='quantity'
             name='quantity'
@@ -37,10 +67,10 @@ const ItemForm = ({ itemId, price, onSubmit }) => {
             value={value}
             onChange={handleChange}
           />
-        <button type='button' onClick={handleIncrease}>+</button>
+        <StyledButton type='button' onClick={handleIncrease}>+</StyledButton>
       </div>
-      <button type='submit'>Add to Cart</button>
-    </form>
+      <StyledButton type='submit'>Add to Cart</StyledButton>
+    </StyledForm>
   </>
   )
 }
