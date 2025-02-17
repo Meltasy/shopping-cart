@@ -1,4 +1,4 @@
-import { vi, describe, it, expect, beforeEach } from 'vitest';
+import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event';
 import CartItem from './CartItem';
@@ -31,19 +31,17 @@ describe('Cart item component', () => {
   })
 })
 
-describe('Cart item component calls handleDelete as expected',() => {
-  const mockDelete = vi.fn()
-
-  beforeEach(() => {
-    render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
-  })
-
+describe('Cart item component calling handleDelete',() => {
   it('renders delete button with the correct text', () => {
+    const mockDelete = vi.fn()
+    render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
     expect(screen.getByRole('button').textContent).toMatch('X')
   })
     
   it('calls handleDelete with correct arguments when button clicked', async () => {
+    const mockDelete = vi.fn()
     const user = userEvent.setup()
+    render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
     const deleteBtn = screen.getByRole('button', { name: 'X'})
     await user.click(deleteBtn)
     expect(mockDelete).toHaveBeenCalledWith('123', 35.50, 3)

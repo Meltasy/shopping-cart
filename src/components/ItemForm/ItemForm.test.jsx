@@ -1,35 +1,35 @@
-import { vi, describe, it, expect, beforeEach } from 'vitest';
+import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ItemForm from './ItemForm'
 
 describe('Shop item form component', () => {
-  beforeEach(() => {
-    render(<ItemForm />)
-  })
-
   it('renders shop item form', () => {
     const { container } = render(<ItemForm />)
     expect(container).toMatchSnapshot()
   })
 
   it('renders label and input for form', () => {
+    render(<ItemForm />)
     screen.debug()
     expect(screen.getByLabelText('Quantity:'))
     expect(screen.getByRole('textbox'))
   })
 
   it('renders all three buttons', () => {
+    render(<ItemForm />)
     expect(screen.getAllByRole('button').length).toBe(3)
   })
 
   it('renders all buttons with the correct text', () => {
+    render(<ItemForm />)
     expect(screen.getAllByRole('button')[0].textContent).toMatch('-')
     expect(screen.getAllByRole('button')[1].textContent).toMatch('+')
     expect(screen.getAllByRole('button')[2].textContent).toMatch(/add to cart/i)
   })
 
   it('increases quantity by 1 after button click', async () => {
+    render(<ItemForm />)
     const user = userEvent.setup()
     const button = screen.getByRole('button', {name: '+'})
     await user.click(button)
@@ -37,6 +37,7 @@ describe('Shop item form component', () => {
   })
 
   it('decreases quantity by 1 after button click, if quantity > 0', async () => {
+    render(<ItemForm />)
     const user = userEvent.setup()
     const increaseBtn = screen.getByRole('button', {name: '+'})
     const decreaseBtn = screen.getByRole('button', {name: '-'})
@@ -46,6 +47,7 @@ describe('Shop item form component', () => {
   })
 
   it('checks initial value of 0 and updates when user types', async () => {
+    render(<ItemForm />)
     const user = userEvent.setup()
     const input = screen.getByRole('textbox')
     expect(input.value).toBe('0')
@@ -54,7 +56,7 @@ describe('Shop item form component', () => {
   })
 })
 
-describe('Shop item form calls onSubmit as expected', () => {
+describe('Shop item form calling onSubmit', () => {
   it('calls onSubmit with correct arguments when form submitted', async () => {
     const mockSubmit = vi.fn()
     render(<ItemForm itemId='123' price={35.50} onSubmit={mockSubmit} />)

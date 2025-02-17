@@ -1,11 +1,10 @@
-import { vi, describe, it, expect, beforeEach } from 'vitest';
+import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ShopItem from './ShopItem'
 
 describe('Shop item component', () => {
   it('renders shop product item', () => {
-    render(<ShopItem imageUrl='fakeImage.jpg' title='Fake product' price={35.50} />)
     const { container } = render(<ShopItem />)
     expect(container).toMatchSnapshot()
   })
@@ -24,13 +23,8 @@ describe('Shop item component', () => {
 })
 
 describe('Shop item component detail buttons', () => {
-  beforeEach(() => {
-    HTMLDialogElement.prototype.showModal = vi.fn()
-    HTMLDialogElement.prototype.close = vi.fn()
-    render(<ShopItem />)
-  })
-
   it('renders all buttons for the DetailItem dialog', () => {
+    render(<ShopItem />)
     const showBtn = screen.getByRole('button', { name: 'Show Detail'})
     const backBtn = screen.getByRole('button', { hidden: true, name: 'Back to Shop' })
     expect(showBtn).toBeInTheDocument()
@@ -38,11 +32,15 @@ describe('Shop item component detail buttons', () => {
   })
 
   it('renders all buttons with the correct text', () => {
+    render(<ShopItem />)
     expect(screen.getAllByRole('button')[0].textContent).toMatch('Show Detail')
     expect(screen.getAllByRole('button', { hidden: true })[1].textContent).toMatch('Back to Shop')
   })
 
   it('renders the DetailItem dialog when button clicked', async () => {
+    HTMLDialogElement.prototype.showModal = vi.fn()
+    HTMLDialogElement.prototype.close = vi.fn()
+    render(<ShopItem />)
     const user = userEvent.setup()
     const showBtn = screen.getByRole('button', { name: 'Show Detail'})
     await user.click(showBtn)
@@ -50,6 +48,9 @@ describe('Shop item component detail buttons', () => {
   })
 
   it('closes the DetailItem dialog when button clicked', async () => {
+    HTMLDialogElement.prototype.showModal = vi.fn()
+    HTMLDialogElement.prototype.close = vi.fn()
+    render(<ShopItem />)
     const user = userEvent.setup()
     const showBtn = screen.getByRole('button', { name: 'Show Detail'})
     await user.click(showBtn)
