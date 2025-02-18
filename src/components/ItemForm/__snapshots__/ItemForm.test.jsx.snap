@@ -2,19 +2,24 @@
 
 exports[`Shop item form component > renders shop item form 1`] = `
 <div>
-  <form>
+  <form
+    class="sc-FEMpB hpBXsI"
+  >
     <label
+      class="sc-fLDLck heNBuh"
       for="quantity"
     >
       Quantity:
     </label>
     <div>
       <button
+        class="sc-gjcoXW eGPGfw"
         type="button"
       >
         -
       </button>
       <input
+        class="sc-gjcoXW sc-dVBluf eGPGfw frlVcV"
         id="quantity"
         max="10"
         min="1"
@@ -24,12 +29,14 @@ exports[`Shop item form component > renders shop item form 1`] = `
         value="0"
       />
       <button
+        class="sc-gjcoXW eGPGfw"
         type="button"
       >
         +
       </button>
     </div>
     <button
+      class="sc-gjcoXW eGPGfw"
       type="submit"
     >
       Add to Cart

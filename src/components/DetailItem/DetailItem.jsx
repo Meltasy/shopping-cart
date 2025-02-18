@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import styled from 'styled-components';
 
 const StyledDialog = styled.dialog`
-  border: 2px solid var(--primary-color-dark);
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
   &::backdrop {
     background-color: var(--primary-color-light);

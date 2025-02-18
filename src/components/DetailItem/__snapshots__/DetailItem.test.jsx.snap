@@ -2,9 +2,11 @@
 
 exports[`Shop item detail component > renders shop item detail dialog 1`] = `
 <div>
-  <dialog>
+  <dialog
+    class="sc-FEMpB fROXOS"
+  >
     <div
-      class="itemDetail"
+      class="sc-gjcoXW hEnKnr"
     >
       <h2>
          €
@@ -12,6 +14,7 @@ exports[`Shop item detail component > renders shop item detail dialog 1`] = `
       </h2>
       <img
         alt=" "
+        class="sc-dVBluf gNBXRn"
       />
       <p />
     </div>

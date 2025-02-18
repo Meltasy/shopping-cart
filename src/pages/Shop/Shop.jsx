@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const Shop = ({ productItems, handleAdd }) => {
 
   return (
-    <div>
+    <>
       <h1>Products</h1>
       <Wrapper>
         {productItems.map(item => (
@@ -27,7 +27,7 @@ const Shop = ({ productItems, handleAdd }) => {
           />
         ))}
       </Wrapper>
-    </div>
+    </>
   )
 }
 

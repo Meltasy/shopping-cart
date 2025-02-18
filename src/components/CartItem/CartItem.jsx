@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   max-width: 600px;
-  height: 300;
+  height: auto;
   padding: 10px;
   color: var(--text-color);
   background-color: white;
-  border: 2px solid var(--primary-color-dark);
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;

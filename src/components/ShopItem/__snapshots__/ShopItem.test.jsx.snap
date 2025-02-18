@@ -3,21 +3,26 @@
 exports[`Shop item component > renders shop product item 1`] = `
 <div>
   <div
-    class="item"
+    class="sc-kfeOyU cPZBqz"
   >
     <img
       alt=" "
+      class="sc-hRDKVd fmIcTT"
     />
     <h3>
        €
       0.00
     </h3>
-    <button>
+    <button
+      class="sc-jBIHhB kKjMVe"
+    >
       Show Detail
     </button>
-    <dialog>
+    <dialog
+      class="sc-FEMpB fROXOS"
+    >
       <div
-        class="itemDetail"
+        class="sc-gjcoXW hEnKnr"
       >
         <h2>
            €
@@ -25,26 +30,34 @@ exports[`Shop item component > renders shop product item 1`] = `
         </h2>
         <img
           alt=" "
+          class="sc-dVBluf gNBXRn"
         />
         <p />
-        <button>
+        <button
+          class="sc-jBIHhB kKjMVe"
+        >
           Back to Shop
         </button>
       </div>
     </dialog>
-    <form>
+    <form
+      class="sc-fLDLck geSOOS"
+    >
       <label
+        class="sc-gNZgCX iOhCWI"
         for="quantity"
       >
         Quantity:
       </label>
       <div>
         <button
+          class="sc-dycHyt hRrA-Dl"
           type="button"
         >
           -
         </button>
         <input
+          class="sc-dycHyt sc-jbAkgO hRrA-Dl ilAZys"
           id="quantity"
           max="10"
           min="1"
@@ -54,12 +67,14 @@ exports[`Shop item component > renders shop product item 1`] = `
           value="0"
         />
         <button
+          class="sc-dycHyt hRrA-Dl"
           type="button"
         >
           +
         </button>
       </div>
       <button
+        class="sc-dycHyt hRrA-Dl"
         type="submit"
       >
         Add to Cart

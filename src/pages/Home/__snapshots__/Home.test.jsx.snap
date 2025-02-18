@@ -2,10 +2,34 @@
 
 exports[`Home component > renders galeries libellule 1`] = `
 <div>
-  <div>
-    <h1>
-      Galeries Libellule
-    </h1>
+  <h1>
+    Galeries Libellule
+  </h1>
+  <p
+    class="sc-FEMpB gTvDhS"
+  >
+    See something you like?
+    <br />
+    Check it out in our shop!
+  </p>
+  <div
+    class="sc-gjcoXW kBAqGb"
+  >
+    <img
+      alt="Fake product A"
+      class="sc-dVBluf ideMSn"
+      src="fakeImageA.jpg"
+    />
+    <img
+      alt="Fake product B"
+      class="sc-dVBluf ideMSn"
+      src="fakeImageB.jpg"
+    />
+    <img
+      alt="Fake product C"
+      class="sc-dVBluf ideMSn"
+      src="fakeImageC.jpg"
+    />
   </div>
 </div>
 `;

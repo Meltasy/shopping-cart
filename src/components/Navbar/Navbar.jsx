@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Wrapper = styled.section`
+const Wrapper = styled.nav`
   font-weight: bold;
   color: var(--background-color);
   background-color: var(--primary-color);
@@ -20,6 +20,7 @@ const StyledList = styled.ul`
   margin: 0;
   display: flex;
   gap: 50px;
+  // border: 5px solid var(--primary-color);
 `
 
 const StyledLink = styled(NavLink)`
@@ -27,6 +28,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: var(--background-color);
   padding: 2.5rem;
+  margin: 20px;
   &.active {
     color: var(--primary-color);
     background-color: var(--background-color);

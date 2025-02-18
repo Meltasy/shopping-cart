@@ -2,18 +2,20 @@
 
 exports[`Cart component > renders cart products 1`] = `
 <div>
-  <div>
-    <h1>
-      Cart
-    </h1>
+  <h1>
+    Cart
+  </h1>
+  <div
+    class="sc-dycHyt dDTbBQ"
+  >
     <div
-      class="cartItems"
+      class="sc-jbAkgO gYNUAZ"
     >
       <div
-        class="itemCart"
+        class="sc-FEMpB cijdTX"
       >
         <div
-          class="details"
+          class="sc-gjcoXW JHeVO"
         >
           <p>
             Fake product A
@@ -33,17 +35,20 @@ exports[`Cart component > renders cart products 1`] = `
         </div>
         <img
           alt=" "
+          class="sc-dVBluf hfbheF"
           src="fakeImageA.jpg"
         />
-        <button>
+        <button
+          class="sc-fLDLck bPdsbk"
+        >
           X
         </button>
       </div>
       <div
-        class="itemCart"
+        class="sc-FEMpB cijdTX"
       >
         <div
-          class="details"
+          class="sc-gjcoXW JHeVO"
         >
           <p>
             Fake product C
@@ -63,14 +68,26 @@ exports[`Cart component > renders cart products 1`] = `
         </div>
         <img
           alt=" "
+          class="sc-dVBluf hfbheF"
           src="fakeImageC.jpg"
         />
-        <button>
+        <button
+          class="sc-fLDLck bPdsbk"
+        >
           X
         </button>
       </div>
     </div>
-    <div>
+    <div
+      class="sc-gNZgCX fsJWWA"
+    >
+      <h3>
+        Subtotal: €
+        0.00
+      </h3>
+      <h3>
+        Shipping: Free!
+      </h3>
       <h2>
         Total: €
         0.00

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   padding: 10px;
   color: var(--text-color);
   background-color: white;
-  border: 2px solid var(--primary-color-dark);
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
   justify-items: center;
   align-self: center;

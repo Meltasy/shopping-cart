@@ -8,8 +8,7 @@ import Shop from '../pages/Shop/Shop'
 import Cart from '../pages/Cart/Cart'
 
 const Wrapper = styled.main`
-  padding: 2.5rem;
-  margin-top: 4.5rem;
+  margin-top: 8rem;
 `
 
 function App() {
@@ -41,7 +40,7 @@ function App() {
   if (error) return <p>Network error</p>
 
   function handleAdd(itemId, price, quantity) {
-    if (cartItems.find(aTC => aTC.id === itemId)) {
+    if (cartItems.find(item => item.id === itemId)) {
       setTotalCost(totalCost + price * quantity)
       setCartItems(cartItems.map(item => {
         if (item.id === itemId) {
@@ -58,7 +57,7 @@ function App() {
   }
 
   function handleDelete(itemId, price, quantity) {
-    setCartItems(cartItems.filter(aTC => aTC.id !== itemId))
+    setCartItems(cartItems.filter(item => item.id !== itemId))
     setQuantityCart(quantityCart - 1)
     setTotalCost(totalCost - price * quantity)
   }

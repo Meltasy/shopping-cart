@@ -17,8 +17,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     color: var(--primary-color);
+    text-shadow: 2px 2px 2px var(--primary-color-light);
+    text-align: center;
+    margin-bottom: 0;
   }
 `
 
