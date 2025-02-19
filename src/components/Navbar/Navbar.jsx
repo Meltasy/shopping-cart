@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import Icon from '@mdi/react'
+import { mdiBasketOutline } from '@mdi/js'
 
 const Wrapper = styled.nav`
   font-weight: bold;
@@ -37,9 +39,10 @@ const StyledLink = styled(NavLink)`
 `
 
 const StyledButton = styled.button`
-  color: var(--primary-color);
-  background-color: var(--background-color);
+  color: var(--background-color);
+  background-color: var(--primary-color);
   border: none;
+  position: relative;
 `
 const QuantityCart = styled.div`
   font-size: 1.2rem;
@@ -48,7 +51,12 @@ const QuantityCart = styled.div`
   background-color: var(--primary-color);
   padding: 10px;
   max-width: 30px;
+  border: var(--primary-color);
   border-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(25%, 25%)
 `
 
 const Navbar = ({ quantityCart }) => {
@@ -65,6 +73,7 @@ const Navbar = ({ quantityCart }) => {
       </StyledList>
       <StyledLink to='../cart'>
         <StyledButton>
+          <Icon path={mdiBasketOutline} size={3} />
           <QuantityCart>{quantityCart}</QuantityCart>
         </StyledButton>
       </StyledLink>

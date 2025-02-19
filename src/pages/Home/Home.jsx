@@ -1,7 +1,21 @@
 import { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-const Blurb = styled.p`
+const blurb = keyframes`
+  0% {
+    transform: translateX(50%)
+  }
+  75% {
+    transform: translateX(-25%)
+  }
+  100% {
+    transform: translateX(0%)
+  }
+`
+
+const Blurb = styled.div`
+  animation: ${blurb} 3000ms;
+  animation-timing-function: ease-in-out;
   font-size: 1.5rem;
   color: var(--primary-color);
   font-weight: 700;
@@ -38,7 +52,7 @@ const Home = ({ productItems }) => {
         prevImages.map(image =>
           image === productItems.length - 1 ? 0 : image + 1
       ))
-    }, 5000)
+    }, 3000)
     return () => clearInterval(interval)
   }, [currentImages, productItems])
 

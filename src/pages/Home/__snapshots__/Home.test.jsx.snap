@@ -5,13 +5,13 @@ exports[`Home component > renders galeries libellule 1`] = `
   <h1>
     Galeries Libellule
   </h1>
-  <p
-    class="sc-FEMpB gTvDhS"
+  <div
+    class="sc-FEMpB geSiKR"
   >
     See something you like?
     <br />
     Check it out in our shop!
-  </p>
+  </div>
   <div
     class="sc-gjcoXW kBAqGb"
   >
