@@ -15,13 +15,13 @@ This project was built as part of [The Odin Project](https://www.theodinproject.
 
 ## Features
 
-* **Dynamic product catalog:** Browse through a collection of products with prices and details
-* **Product details:** View comprehensive information about each product including images and descriptions
-* **Shopping cart management:** Add, remove and update items and their quantities with ease
-* **Real-time updates:** Cart counter shows current item count and updates instantly
-* **Responsive navigation:** Seamless navigation between home, shop and cart pages
-* **Quantity controls:** Manual input field plus increment/decrement buttons for precise quantity selection
-* **Comprehensive testing:** Rigorous test coverage ensuring reliable functionality
+* 💶 **Dynamic product catalog:** Browse through a collection of products with prices and details
+* 🧸 **Product details:** View comprehensive information about each product including images and descriptions
+* 🛒 **Shopping cart management:** Add, remove and update items and their quantities with ease
+* 🏪 **Real-time updates:** Cart counter shows current item count and updates instantly
+* 🧭 **Responsive navigation:** Seamless navigation between home, shop and cart pages
+* 🧮 **Quantity controls:** Manual input field plus increment/decrement buttons for precise quantity selection
+* 🔬 **Comprehensive testing:** Rigorous test coverage ensuring reliable functionality
 
 ## Future Improvements
 
@@ -42,13 +42,11 @@ This project was built as part of [The Odin Project](https://www.theodinproject.
 
 Prerequisite: Node.js v22.19.0
 
-Example:
+1. Clone the repository: `git clone git@github.com:Meltasy/shopping-cart.git`
+2. Set up the frontend: `cd shopping-cart` and `npm install`
+3. Start the server: `npm run dev`
+4. Run tests (optional): `npm test`
 
-Clone the repository: `git clone git@github.com:Meltasy/shopping-cart.git`
-Set up the frontend: `cd shopping-cart` and `npm install`
-Start the server: `npm run dev`
-Run tests (optional): `npm test`
-
-##License
+## License
 
 This entire project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
