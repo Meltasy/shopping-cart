@@ -1,14 +1,22 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 import GlobalStyle from '../globalStyles'
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer/Footer'
 import Home from '../pages/Home/Home'
 import Shop from '../pages/Shop/Shop'
 import Cart from '../pages/Cart/Cart'
 
-const Wrapper = styled.main`
+const AppWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
+
+const MainWrapper = styled.main`
   margin-top: 8rem;
+  flex: 1;
 `
 
 function App() {
@@ -64,22 +72,25 @@ function App() {
   
   return (
     <>
-      <GlobalStyle />
-      <Navbar quantityCart={quantityCart} />
-      <Wrapper>
-        {name === 'shop' ? (
-          <Shop productItems={productItems} handleAdd={handleAdd} />
-        ) : name === 'cart' ? (
-          <Cart
-            productItems={productItems}
-            cartItems={cartItems}
-            totalCost={totalCost}
-            handleDelete={handleDelete}
-          />
-        ) : (
-          <Home productItems={productItems} />
-        )}
-      </Wrapper>
+      <AppWrapper>
+        <GlobalStyle />
+        <Navbar quantityCart={quantityCart} />
+        <MainWrapper>
+          {name === 'shop' ? (
+            <Shop productItems={productItems} handleAdd={handleAdd} />
+          ) : name === 'cart' ? (
+            <Cart
+              productItems={productItems}
+              cartItems={cartItems}
+              totalCost={totalCost}
+              handleDelete={handleDelete}
+            />
+          ) : (
+            <Home productItems={productItems} />
+          )}
+        </MainWrapper>
+        <Footer />
+      </AppWrapper>
     </>
   )
 }

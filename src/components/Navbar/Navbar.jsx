@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
 import Icon from '@mdi/react'
 import { mdiBasketOutline } from '@mdi/js'
 

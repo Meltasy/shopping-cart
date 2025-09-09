@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const StyledForm = styled.form`
   display: grid;
