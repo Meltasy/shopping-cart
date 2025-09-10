@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import styled, { keyframes } from 'styled-components'
+import DragonFly from '../../components/Dragonfly'
 
 const blurb = keyframes`
   0% {
     transform: translateX(50%)
   }
   75% {
-    transform: translateX(-25%)
+    transform: translateX(-20%)
   }
   100% {
     transform: translateX(0%)
@@ -14,33 +15,54 @@ const blurb = keyframes`
 `
 
 const Blurb = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0;
   animation: ${blurb} 3000ms;
   animation-timing-function: ease-in-out;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  font-weight: 700;
-  text-align: right;
-  padding-right: 5rem;
-  margin-bottom: 0;
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `
 
 const Wrapper = styled.div`
+  background-color: var(--secondary-color-light);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
-  background-color: white;
-  border-top: 20px solid var(--primary-color);
-  border-bottom: 20px solid var(--primary-color);
-  transform: skewY(10deg);
+  align-items: center;
+  gap: 1rem;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+  }
+`
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 500px;
+  height: 500px;
+  @media (max-width: 480px) {
+    width: min(90vw, 250px);
+    height: min(90vw, 250px);
+  }
 `
 
 const StyledImage = styled.img`
-  display: ${props => (props.$hidden ? 'none' : 'block' )};
-  max-width: 500px;
-  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: ${props => (props.$isVisible ? 1 : 0 )};
   object-fit: contain;
   border-radius: 10px;
-  padding: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: opacity 1s ease-in-out;
 `
 
 const Home = ({ productItems }) => {
@@ -54,27 +76,27 @@ const Home = ({ productItems }) => {
       ))
     }, 3000)
     return () => clearInterval(interval)
-  }, [currentImages, productItems])
+  }, [productItems.length])
 
   return (
     <>
       <h1>Galeries Libellule</h1>
+      <DragonFly />
       <Blurb>See something you like?<br />
       Check it out in our shop!</Blurb>
       <Wrapper>
-        {currentImages.map(index => {
-          const item = productItems[index]
-          return (
-            item && (
+        {[0, 1, 2].map(wrapperIndex => (
+          <ImageWrapper key={wrapperIndex}>
+            {productItems.map((item, itemIndex) => (
               <StyledImage
                 key={item.id}
                 src={item.image}
                 alt={item.title}
-                $hidden={false}
+                $isVisible={itemIndex === currentImages[wrapperIndex]}
               />
-            )
-          )
-        })}
+            ))}
+          </ImageWrapper>
+        ))}
       </Wrapper>
     </>
   )

@@ -2,36 +2,75 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import DetailItem from '../DetailItem/DetailItem'
 import ItemForm from '../ItemForm/ItemForm'
+import Icon from '@mdi/react'
+import { mdiMagnifyPlusOutline } from '@mdi/js'
+import { mdiMagnifyMinusOutline } from '@mdi/js'
 
 const Wrapper = styled.div`
-  width: 300px;
-  height: 550px;
-  padding: 10px;
   color: var(--text-color);
-  background-color: white;
-  border: 2px solid var(--primary-color);
+  background-color: var(--secondary-color-light);
+  width: 300px;
+  min-height: 400px;
+  margin: 0;
+  padding: 0.6rem;
   border-radius: 10px;
-  justify-items: center;
-  align-self: center;
-  align-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  @media (max-width: 480px) {
+    width: min(95vw, 300px);
+    min-height: min(95vw, 400px);
+  }
 `
 
 const StyledImage = styled.img`
   max-width: 225px;
   max-height: 225px;
   object-fit: cover;
-  border-radius: 10px;
+`
+
+const ExtraWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
+  @media (max-width: 480px) {
+    gap: 0.3rem;
+  }
+`
+
+const SmallWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
+  @media (max-width: 480px) {
+    gap: 0.3rem;
+  }
+`
+
+const ButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const StyledButton = styled.button`
   font-family: inherit;
   font-size: inherit;
-  color: var(--background-color);
-  background-color: var(--primary-color-dark);
-  padding: 5px 10px;
-  border: 2px solid var(--primary-color);
+  color: var(--secondary-color-dark);
+  background-color: var(--secondary-color);
+  margin: 0.3rem;
+  padding: 0.5rem 0.6rem 0.3rem 0.5rem;
+  border: none;
   border-radius: 5px;
-  margin: 5px 0;
 `
 
 const ShopItem = ({ itemId, imageUrl, title, price, description, handleAdd }) => {
@@ -40,20 +79,30 @@ const ShopItem = ({ itemId, imageUrl, title, price, description, handleAdd }) =>
   return (
     <Wrapper key={itemId}>
       <StyledImage src={imageUrl} alt=' ' />
-      <h3>{title} €{price ? price.toFixed(2) : '0.00'}</h3>
-      <StyledButton onClick={() => setShowDetail(true)}>Show Detail</StyledButton>
-      <DetailItem
-        showDetail={showDetail}
-        itemId={itemId}
-        title={title}
-        price={price}
-        imageUrl={imageUrl}
-        description={description}
-      >
-        <StyledButton onClick={() => setShowDetail(false)}>Back to Shop</StyledButton>
-      </DetailItem>
-      <ItemForm
-        itemId={itemId} price={price} onSubmit={handleAdd} />
+      <ExtraWrapper>
+        <h3>{title}</h3>
+        <ButtonsWrapper>
+          <SmallWrapper>
+            <h3>€{price ? price.toFixed(2) : '0.00'}</h3>
+            <StyledButton onClick={() => setShowDetail(true)}>
+              <Icon path={mdiMagnifyPlusOutline} size={1} />
+            </StyledButton>
+            <DetailItem
+              showDetail={showDetail}
+              itemId={itemId}
+              title={title}
+              price={price}
+              imageUrl={imageUrl}
+              description={description}
+            >
+              <StyledButton onClick={() => setShowDetail(false)}>
+                <Icon path={mdiMagnifyMinusOutline} size={1.5} />
+              </StyledButton>
+            </DetailItem>
+          </SmallWrapper>
+          <ItemForm itemId={itemId} price={price} onSubmit={handleAdd} />
+        </ButtonsWrapper>
+      </ExtraWrapper>
     </Wrapper>
   )
 }

@@ -19,15 +19,16 @@ This project was built as part of [The Odin Project](https://www.theodinproject.
 * 🧸 **Product details:** View comprehensive information about each product including images and descriptions
 * 🛒 **Shopping cart management:** Add, remove and update items and their quantities with ease
 * 🏪 **Real-time updates:** Cart counter shows current item count and updates instantly
-* 🧭 **Responsive navigation:** Seamless navigation between home, shop and cart pages
+* 🧭 **Multi-page navigation:** Seamless navigation between home, shop and cart pages
 * 🧮 **Quantity controls:** Manual input field plus increment/decrement buttons for precise quantity selection
+* 📱 **Responsive design:** Optimized layout that adapts smoothly to mobile and desktop screens
 * 🔬 **Comprehensive testing:** Rigorous test coverage ensuring reliable functionality
 
 ## Future Improvements
 
 * Search bar for finding products
 * Filter for searching by category
-* Responsive design for desktop and mobile
+* 
 
 ## Tech Stack
 

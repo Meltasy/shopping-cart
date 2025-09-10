@@ -1,37 +1,53 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import Icon from '@mdi/react'
+import { mdiBasketPlusOutline } from '@mdi/js'
 
 const StyledForm = styled.form`
-  display: grid;
-  background-color: var(--primary-color-light);
-  padding: 20px 30px;
+  width: 100%;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.6rem;
+  @media (max-width: 480px) {
+    gap: 0.3rem;
+  }
 `
 
-const StyledButton = styled.button`
+const buttonStyles =`
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
   color: var(--background-color);
-  background-color: var(--primary-color-dark);
-  padding: 5px 10px;
-  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  margin: 0.1rem;
+  outline: none;
+  border: none;
   border-radius: 5px;
-  margin: 5px 0;
+  &:hover {
+    color: var(--primary-color-dark);
+    background-color: var(--primary-color-light);
+  }
+`
+
+const StyledButton = styled.button`
+  ${buttonStyles}
+  padding: 0.3rem 0.6rem;
+`
+
+const StyledIconButton = styled.button`
+  ${buttonStyles}
+  padding: 0.5rem 0.6rem 0.3rem 0.5rem;
 `
 
 const StyledInput = styled(StyledButton)`
-  max-width: 50px;
-`
-
-const StyledLabel = styled.label`
-  font-weight: 700;
-  font-size: 1.2rem;
-  max-width: 50px;
+  max-width: 1rem;
 `
 
 const ItemForm = ({ itemId, price, onSubmit }) => {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(1)
 
   function handleChange(e) {
     setValue(Number(e.currentTarget.value))
@@ -54,7 +70,6 @@ const ItemForm = ({ itemId, price, onSubmit }) => {
         onSubmit(itemId, price, value)
         setValue(0)
       }}>
-      <StyledLabel htmlFor='quantity'>Quantity:</StyledLabel>
       <div>
         <StyledButton type='button' onClick={handleDecrease}>-</StyledButton>
           <StyledInput as='input'
@@ -69,7 +84,9 @@ const ItemForm = ({ itemId, price, onSubmit }) => {
           />
         <StyledButton type='button' onClick={handleIncrease}>+</StyledButton>
       </div>
-      <StyledButton type='submit'>Add to Cart</StyledButton>
+      <StyledIconButton type='submit'>
+        <Icon path={mdiBasketPlusOutline} size={1} />  
+      </StyledIconButton>
     </StyledForm>
   </>
   )

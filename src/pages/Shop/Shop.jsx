@@ -2,11 +2,16 @@ import ShopItem from '../../components/ShopItem/ShopItem'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  padding: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
+  gap: 1rem;
   justify-content: center;
+  align-items: center;
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
 `
 
 const Shop = ({ productItems, handleAdd }) => {
