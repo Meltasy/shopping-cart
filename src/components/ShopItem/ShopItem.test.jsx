@@ -13,28 +13,23 @@ describe('Shop item component', () => {
     render(<ShopItem imageUrl='fakeImage.jpg' title='Fake product' price={35.50} />)
     screen.debug()
     expect(screen.getAllByRole('img')[0]).toHaveAttribute('src', 'fakeImage.jpg')
-    expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent('Fake product €35.50')
+    expect(screen.getAllByRole('heading', { level: 3 })[0]).toHaveTextContent('Fake product')
+    expect(screen.getAllByRole('heading', { level: 3 })[1]).toHaveTextContent('€35.50')
   })
 
   it('does not render shop item details when not found', () => {
     render(<ShopItem imageUrl='fakeImage.jpg' title='Fake product' price={57.99} />)
-    expect(screen.queryByText('€57.99')).not.toBeInTheDocument()
+    expect(screen.queryByText('57.99')).not.toBeInTheDocument()
   })
 })
 
 describe('Shop item component detail buttons', () => {
   it('renders all buttons for the DetailItem dialog', () => {
     render(<ShopItem />)
-    const showBtn = screen.getByRole('button', { name: 'Show Detail'})
-    const backBtn = screen.getByRole('button', { hidden: true, name: 'Back to Shop' })
+    const showBtn = (screen.getAllByRole('button')[0])
+    const backBtn = (screen.getAllByRole('button', { hidden: true })[1])
     expect(showBtn).toBeInTheDocument()
     expect(backBtn).toBeInTheDocument()
-  })
-
-  it('renders all buttons with the correct text', () => {
-    render(<ShopItem />)
-    expect(screen.getAllByRole('button')[0].textContent).toMatch('Show Detail')
-    expect(screen.getAllByRole('button', { hidden: true })[1].textContent).toMatch('Back to Shop')
   })
 
   it('renders the DetailItem dialog when button clicked', async () => {
@@ -42,7 +37,7 @@ describe('Shop item component detail buttons', () => {
     HTMLDialogElement.prototype.close = vi.fn()
     render(<ShopItem />)
     const user = userEvent.setup()
-    const showBtn = screen.getByRole('button', { name: 'Show Detail'})
+    const showBtn = (screen.getAllByRole('button')[0])
     await user.click(showBtn)
     expect(HTMLDialogElement.prototype.showModal).toHaveBeenCalled()
   })
@@ -52,10 +47,10 @@ describe('Shop item component detail buttons', () => {
     HTMLDialogElement.prototype.close = vi.fn()
     render(<ShopItem />)
     const user = userEvent.setup()
-    const showBtn = screen.getByRole('button', { name: 'Show Detail'})
+    const showBtn = (screen.getAllByRole('button')[0])
     await user.click(showBtn)
     expect(HTMLDialogElement.prototype.showModal).toHaveBeenCalled()
-    const backBtn = screen.getByRole('button', { hidden: true, name: 'Back to Shop' })
+    const backBtn = (screen.getAllByRole('button', { hidden: true })[1])
     await user.click(backBtn)
     expect(HTMLDialogElement.prototype.close).toHaveBeenCalled()
   })

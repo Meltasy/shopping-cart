@@ -6,262 +6,432 @@ exports[`Shop component > renders shop products 1`] = `
     Products
   </h1>
   <div
-    class="sc-cMqPwU keFeiM"
+    class="sc-dkBYrC frIrcj"
+  >
+    <label
+      for="category"
+    >
+      Choose a category:
+    </label>
+    <select
+      class="sc-kXOizl dCDXio"
+      id="category"
+    >
+      <option
+        value="all"
+      >
+        All
+      </option>
+      <option
+        value="fakeCategoryA"
+      >
+        FakeCategoryA
+      </option>
+      <option
+        value="fakeCategoryB"
+      >
+        FakeCategoryB
+      </option>
+    </select>
+  </div>
+  <div
+    class="sc-jZTQcj gyxmry"
   >
     <div
-      class="sc-kfeOyU cPZBqz"
+      class="sc-jBIHhB ljnGCX"
     >
       <img
         alt=" "
-        class="sc-hRDKVd fmIcTT"
+        class="sc-cMqPwU duECSg"
         src="fakeImageA.jpg"
       />
-      <h3>
-        Fake product A
-         €
-        35.50
-      </h3>
-      <button
-        class="sc-jBIHhB kKjMVe"
+      <div
+        class="sc-jUkaYT bHrHaU"
       >
-        Show Detail
-      </button>
-      <dialog
-        class="sc-FEMpB fROXOS"
-      >
+        <h3>
+          Fake product A
+        </h3>
         <div
-          class="sc-gjcoXW hEnKnr"
+          class="sc-jHswkR eqKxLb"
         >
-          <h2>
-            Fake product A
-             €
-            35.50
-          </h2>
-          <img
-            alt=" "
-            class="sc-dVBluf gNBXRn"
-            src="fakeImageA.jpg"
-          />
-          <p>
-            This is fake product A.
-          </p>
-          <button
-            class="sc-jBIHhB kKjMVe"
+          <div
+            class="sc-deSjom hTmSZG"
           >
-            Back to Shop
-          </button>
+            <h3>
+              €
+              35.50
+            </h3>
+            <button
+              class="sc-cSaEAk dpGhXn"
+            >
+              <svg
+                role="presentation"
+                style="width: 1.5rem; height: 1.5rem;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5,14L20.5,19L19,20.5L14,15.5V14.71L13.73,14.43C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.43,13.73L14.71,14H15.5M9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14M12,10H10V12H9V10H7V9H9V7H10V9H12V10Z"
+                  style="fill: currentColor;"
+                />
+              </svg>
+            </button>
+            <dialog
+              class="sc-FEMpB hQQwrV"
+            >
+              <div
+                class="sc-gjcoXW ifkxDl"
+              >
+                <div
+                  class="sc-dVBluf hrHbBw"
+                >
+                  <div
+                    class="sc-fLDLck lhfGYe"
+                  >
+                    <h2>
+                      Fake product A
+                    </h2>
+                    <h2>
+                      €
+                      35.50
+                    </h2>
+                  </div>
+                  <div>
+                    <button
+                      class="sc-cSaEAk dpGhXn"
+                    >
+                      <svg
+                        role="presentation"
+                        style="width: 2.25rem; height: 2.25rem;"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.5,14H14.71L14.43,13.73C15.41,12.59 16,11.11 16,9.5A6.5,6.5 0 0,0 9.5,3A6.5,6.5 0 0,0 3,9.5A6.5,6.5 0 0,0 9.5,16C11.11,16 12.59,15.41 13.73,14.43L14,14.71V15.5L19,20.5L20.5,19L15.5,14M9.5,14C7,14 5,12 5,9.5C5,7 7,5 9.5,5C12,5 14,7 14,9.5C14,12 12,14 9.5,14M7,9H12V10H7V9Z"
+                          style="fill: currentColor;"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  alt=" "
+                  class="sc-dycHyt lWfNk"
+                  src="fakeImageA.jpg"
+                />
+                <p>
+                  This is fake product A.
+                </p>
+              </div>
+            </dialog>
+          </div>
+          <form
+            class="sc-jbAkgO knpBS"
+          >
+            <div>
+              <button
+                class="sc-gNZgCX iwZfDw"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                class="sc-gNZgCX sc-hRDKVd iwZfDw hrYMlT"
+                id="quantity"
+                max="10"
+                min="1"
+                name="quantity"
+                pattern="^\\d+$"
+                type="text"
+                value="1"
+              />
+              <button
+                class="sc-gNZgCX iwZfDw"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="sc-kfeOyU cvoqkg"
+              type="submit"
+            >
+              <svg
+                role="presentation"
+                style="width: 1.5rem; height: 1.5rem;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 15V18H23V20H20V23H18V20H15V18H18V15H20M12 13C10.9 13 10 13.9 10 15S10.9 17 12 17 14 16.1 14 15 13.1 13 12 13M13.35 21H5.5C4.58 21 3.81 20.38 3.58 19.54L1.04 10.27C1 10.18 1 10.09 1 10C1 9.45 1.45 9 2 9H6.79L11.17 2.45C11.36 2.16 11.68 2 12 2S12.64 2.16 12.83 2.44L17.21 9H22C22.55 9 23 9.45 23 10L22.97 10.27L22 13.81C21.43 13.5 20.79 13.24 20.12 13.11L20.7 11H3.31L5.5 19H13C13 19.7 13.13 20.37 13.35 21M9.2 9H14.8L12 4.8L9.2 9Z"
+                  style="fill: currentColor;"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
-      </dialog>
-      <form
-        class="sc-fLDLck geSOOS"
-      >
-        <label
-          class="sc-gNZgCX iOhCWI"
-          for="quantity"
-        >
-          Quantity:
-        </label>
-        <div>
-          <button
-            class="sc-dycHyt hRrA-Dl"
-            type="button"
-          >
-            -
-          </button>
-          <input
-            class="sc-dycHyt sc-jbAkgO hRrA-Dl ilAZys"
-            id="quantity"
-            max="10"
-            min="1"
-            name="quantity"
-            pattern="^\\d+$"
-            type="text"
-            value="0"
-          />
-          <button
-            class="sc-dycHyt hRrA-Dl"
-            type="button"
-          >
-            +
-          </button>
-        </div>
-        <button
-          class="sc-dycHyt hRrA-Dl"
-          type="submit"
-        >
-          Add to Cart
-        </button>
-      </form>
+      </div>
     </div>
     <div
-      class="sc-kfeOyU cPZBqz"
+      class="sc-jBIHhB ljnGCX"
     >
       <img
         alt=" "
-        class="sc-hRDKVd fmIcTT"
+        class="sc-cMqPwU duECSg"
         src="fakeImageB.jpg"
       />
-      <h3>
-        Fake product B
-         €
-        57.99
-      </h3>
-      <button
-        class="sc-jBIHhB kKjMVe"
+      <div
+        class="sc-jUkaYT bHrHaU"
       >
-        Show Detail
-      </button>
-      <dialog
-        class="sc-FEMpB fROXOS"
-      >
+        <h3>
+          Fake product B
+        </h3>
         <div
-          class="sc-gjcoXW hEnKnr"
+          class="sc-jHswkR eqKxLb"
         >
-          <h2>
-            Fake product B
-             €
-            57.99
-          </h2>
-          <img
-            alt=" "
-            class="sc-dVBluf gNBXRn"
-            src="fakeImageB.jpg"
-          />
-          <p>
-            This is fake product B.
-          </p>
-          <button
-            class="sc-jBIHhB kKjMVe"
+          <div
+            class="sc-deSjom hTmSZG"
           >
-            Back to Shop
-          </button>
+            <h3>
+              €
+              57.99
+            </h3>
+            <button
+              class="sc-cSaEAk dpGhXn"
+            >
+              <svg
+                role="presentation"
+                style="width: 1.5rem; height: 1.5rem;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5,14L20.5,19L19,20.5L14,15.5V14.71L13.73,14.43C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.43,13.73L14.71,14H15.5M9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14M12,10H10V12H9V10H7V9H9V7H10V9H12V10Z"
+                  style="fill: currentColor;"
+                />
+              </svg>
+            </button>
+            <dialog
+              class="sc-FEMpB hQQwrV"
+            >
+              <div
+                class="sc-gjcoXW ifkxDl"
+              >
+                <div
+                  class="sc-dVBluf hrHbBw"
+                >
+                  <div
+                    class="sc-fLDLck lhfGYe"
+                  >
+                    <h2>
+                      Fake product B
+                    </h2>
+                    <h2>
+                      €
+                      57.99
+                    </h2>
+                  </div>
+                  <div>
+                    <button
+                      class="sc-cSaEAk dpGhXn"
+                    >
+                      <svg
+                        role="presentation"
+                        style="width: 2.25rem; height: 2.25rem;"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.5,14H14.71L14.43,13.73C15.41,12.59 16,11.11 16,9.5A6.5,6.5 0 0,0 9.5,3A6.5,6.5 0 0,0 3,9.5A6.5,6.5 0 0,0 9.5,16C11.11,16 12.59,15.41 13.73,14.43L14,14.71V15.5L19,20.5L20.5,19L15.5,14M9.5,14C7,14 5,12 5,9.5C5,7 7,5 9.5,5C12,5 14,7 14,9.5C14,12 12,14 9.5,14M7,9H12V10H7V9Z"
+                          style="fill: currentColor;"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  alt=" "
+                  class="sc-dycHyt lWfNk"
+                  src="fakeImageB.jpg"
+                />
+                <p>
+                  This is fake product B.
+                </p>
+              </div>
+            </dialog>
+          </div>
+          <form
+            class="sc-jbAkgO knpBS"
+          >
+            <div>
+              <button
+                class="sc-gNZgCX iwZfDw"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                class="sc-gNZgCX sc-hRDKVd iwZfDw hrYMlT"
+                id="quantity"
+                max="10"
+                min="1"
+                name="quantity"
+                pattern="^\\d+$"
+                type="text"
+                value="1"
+              />
+              <button
+                class="sc-gNZgCX iwZfDw"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="sc-kfeOyU cvoqkg"
+              type="submit"
+            >
+              <svg
+                role="presentation"
+                style="width: 1.5rem; height: 1.5rem;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 15V18H23V20H20V23H18V20H15V18H18V15H20M12 13C10.9 13 10 13.9 10 15S10.9 17 12 17 14 16.1 14 15 13.1 13 12 13M13.35 21H5.5C4.58 21 3.81 20.38 3.58 19.54L1.04 10.27C1 10.18 1 10.09 1 10C1 9.45 1.45 9 2 9H6.79L11.17 2.45C11.36 2.16 11.68 2 12 2S12.64 2.16 12.83 2.44L17.21 9H22C22.55 9 23 9.45 23 10L22.97 10.27L22 13.81C21.43 13.5 20.79 13.24 20.12 13.11L20.7 11H3.31L5.5 19H13C13 19.7 13.13 20.37 13.35 21M9.2 9H14.8L12 4.8L9.2 9Z"
+                  style="fill: currentColor;"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
-      </dialog>
-      <form
-        class="sc-fLDLck geSOOS"
-      >
-        <label
-          class="sc-gNZgCX iOhCWI"
-          for="quantity"
-        >
-          Quantity:
-        </label>
-        <div>
-          <button
-            class="sc-dycHyt hRrA-Dl"
-            type="button"
-          >
-            -
-          </button>
-          <input
-            class="sc-dycHyt sc-jbAkgO hRrA-Dl ilAZys"
-            id="quantity"
-            max="10"
-            min="1"
-            name="quantity"
-            pattern="^\\d+$"
-            type="text"
-            value="0"
-          />
-          <button
-            class="sc-dycHyt hRrA-Dl"
-            type="button"
-          >
-            +
-          </button>
-        </div>
-        <button
-          class="sc-dycHyt hRrA-Dl"
-          type="submit"
-        >
-          Add to Cart
-        </button>
-      </form>
+      </div>
     </div>
     <div
-      class="sc-kfeOyU cPZBqz"
+      class="sc-jBIHhB ljnGCX"
     >
       <img
         alt=" "
-        class="sc-hRDKVd fmIcTT"
+        class="sc-cMqPwU duECSg"
         src="fakeImageC.jpg"
       />
-      <h3>
-        Fake product C
-         €
-        7.50
-      </h3>
-      <button
-        class="sc-jBIHhB kKjMVe"
+      <div
+        class="sc-jUkaYT bHrHaU"
       >
-        Show Detail
-      </button>
-      <dialog
-        class="sc-FEMpB fROXOS"
-      >
+        <h3>
+          Fake product C
+        </h3>
         <div
-          class="sc-gjcoXW hEnKnr"
+          class="sc-jHswkR eqKxLb"
         >
-          <h2>
-            Fake product C
-             €
-            7.50
-          </h2>
-          <img
-            alt=" "
-            class="sc-dVBluf gNBXRn"
-            src="fakeImageC.jpg"
-          />
-          <p>
-            This is fake product C.
-          </p>
-          <button
-            class="sc-jBIHhB kKjMVe"
+          <div
+            class="sc-deSjom hTmSZG"
           >
-            Back to Shop
-          </button>
+            <h3>
+              €
+              7.50
+            </h3>
+            <button
+              class="sc-cSaEAk dpGhXn"
+            >
+              <svg
+                role="presentation"
+                style="width: 1.5rem; height: 1.5rem;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5,14L20.5,19L19,20.5L14,15.5V14.71L13.73,14.43C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.43,13.73L14.71,14H15.5M9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14M12,10H10V12H9V10H7V9H9V7H10V9H12V10Z"
+                  style="fill: currentColor;"
+                />
+              </svg>
+            </button>
+            <dialog
+              class="sc-FEMpB hQQwrV"
+            >
+              <div
+                class="sc-gjcoXW ifkxDl"
+              >
+                <div
+                  class="sc-dVBluf hrHbBw"
+                >
+                  <div
+                    class="sc-fLDLck lhfGYe"
+                  >
+                    <h2>
+                      Fake product C
+                    </h2>
+                    <h2>
+                      €
+                      7.50
+                    </h2>
+                  </div>
+                  <div>
+                    <button
+                      class="sc-cSaEAk dpGhXn"
+                    >
+                      <svg
+                        role="presentation"
+                        style="width: 2.25rem; height: 2.25rem;"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.5,14H14.71L14.43,13.73C15.41,12.59 16,11.11 16,9.5A6.5,6.5 0 0,0 9.5,3A6.5,6.5 0 0,0 3,9.5A6.5,6.5 0 0,0 9.5,16C11.11,16 12.59,15.41 13.73,14.43L14,14.71V15.5L19,20.5L20.5,19L15.5,14M9.5,14C7,14 5,12 5,9.5C5,7 7,5 9.5,5C12,5 14,7 14,9.5C14,12 12,14 9.5,14M7,9H12V10H7V9Z"
+                          style="fill: currentColor;"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <img
+                  alt=" "
+                  class="sc-dycHyt lWfNk"
+                  src="fakeImageC.jpg"
+                />
+                <p>
+                  This is fake product C.
+                </p>
+              </div>
+            </dialog>
+          </div>
+          <form
+            class="sc-jbAkgO knpBS"
+          >
+            <div>
+              <button
+                class="sc-gNZgCX iwZfDw"
+                type="button"
+              >
+                -
+              </button>
+              <input
+                class="sc-gNZgCX sc-hRDKVd iwZfDw hrYMlT"
+                id="quantity"
+                max="10"
+                min="1"
+                name="quantity"
+                pattern="^\\d+$"
+                type="text"
+                value="1"
+              />
+              <button
+                class="sc-gNZgCX iwZfDw"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="sc-kfeOyU cvoqkg"
+              type="submit"
+            >
+              <svg
+                role="presentation"
+                style="width: 1.5rem; height: 1.5rem;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 15V18H23V20H20V23H18V20H15V18H18V15H20M12 13C10.9 13 10 13.9 10 15S10.9 17 12 17 14 16.1 14 15 13.1 13 12 13M13.35 21H5.5C4.58 21 3.81 20.38 3.58 19.54L1.04 10.27C1 10.18 1 10.09 1 10C1 9.45 1.45 9 2 9H6.79L11.17 2.45C11.36 2.16 11.68 2 12 2S12.64 2.16 12.83 2.44L17.21 9H22C22.55 9 23 9.45 23 10L22.97 10.27L22 13.81C21.43 13.5 20.79 13.24 20.12 13.11L20.7 11H3.31L5.5 19H13C13 19.7 13.13 20.37 13.35 21M9.2 9H14.8L12 4.8L9.2 9Z"
+                  style="fill: currentColor;"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
-      </dialog>
-      <form
-        class="sc-fLDLck geSOOS"
-      >
-        <label
-          class="sc-gNZgCX iOhCWI"
-          for="quantity"
-        >
-          Quantity:
-        </label>
-        <div>
-          <button
-            class="sc-dycHyt hRrA-Dl"
-            type="button"
-          >
-            -
-          </button>
-          <input
-            class="sc-dycHyt sc-jbAkgO hRrA-Dl ilAZys"
-            id="quantity"
-            max="10"
-            min="1"
-            name="quantity"
-            pattern="^\\d+$"
-            type="text"
-            value="0"
-          />
-          <button
-            class="sc-dycHyt hRrA-Dl"
-            type="button"
-          >
-            +
-          </button>
-        </div>
-        <button
-          class="sc-dycHyt hRrA-Dl"
-          type="submit"
-        >
-          Add to Cart
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

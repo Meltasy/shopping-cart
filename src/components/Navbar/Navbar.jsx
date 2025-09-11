@@ -5,6 +5,7 @@ import Icon from '@mdi/react'
 import { mdiBasketOutline } from '@mdi/js'
 
 const Wrapper = styled.nav`
+  font-family: 'merienda-bold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
   color: var(--background-color);
   background-color: var(--primary-color);

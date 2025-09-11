@@ -17,18 +17,17 @@ This project was built as part of [The Odin Project](https://www.theodinproject.
 
 * 💶 **Dynamic product catalog:** Browse through a collection of products with prices and details
 * 🧸 **Product details:** View comprehensive information about each product including images and descriptions
-* 🛒 **Shopping cart management:** Add, remove and update items and their quantities with ease
-* 🏪 **Real-time updates:** Cart counter shows current item count and updates instantly
-* 🧭 **Multi-page navigation:** Seamless navigation between home, shop and cart pages
-* 🧮 **Quantity controls:** Manual input field plus increment/decrement buttons for precise quantity selection
-* 📱 **Responsive design:** Optimized layout that adapts smoothly to mobile and desktop screens
+* 🛒 **Smart cart management:** Add, remove and update items effortlessly, with real-time cart updates
+* 🧮 **Intuitive quantity controls:** Adjust quantities with increment/decrement buttons or manual entry
+* 🧭 **Seamless navigation:** Smooth transitions between home, shop and cart pages for a relaxing experience
+* 📱 **Responsive design:** Optimized layout that adapts easily to mobile and desktop screens
 * 🔬 **Comprehensive testing:** Rigorous test coverage ensuring reliable functionality
 
 ## Future Improvements
 
-* Search bar for finding products
-* Filter for searching by category
-* 
+* Wishlist to save products for later
+* Email notifications for orders
+* Shipping rates by location or country
 
 ## Tech Stack
 

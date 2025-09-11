@@ -19,7 +19,7 @@ describe('Cart item component', () => {
     screen.debug()
     expect(screen.getByText('Fake product A')).toBeInTheDocument()
     expect(screen.getAllByRole('heading', { level: 4 })[0]).toHaveTextContent('€35.50')
-    expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent('3')
+    expect(screen.getByText('3')).toBeInTheDocument()
     expect(screen.getAllByRole('heading', { level: 4 })[1]).toHaveTextContent('€106.50')
     expect(screen.getByRole('img')).toHaveAttribute('src', 'fakeImageA.jpg')
   })
@@ -35,14 +35,16 @@ describe('Cart item component calling handleDelete',() => {
   it('renders delete button with the correct text', () => {
     const mockDelete = vi.fn()
     render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
-    expect(screen.getByRole('button').textContent).toMatch('X')
+    const deleteBtn = screen.getByRole('button')
+    expect(deleteBtn).toBeInTheDocument()
+    expect(deleteBtn.querySelector('svg')).toBeInTheDocument()
   })
     
   it('calls handleDelete with correct arguments when button clicked', async () => {
     const mockDelete = vi.fn()
     const user = userEvent.setup()
     render(<CartItem itemId='123' price={35.50} quantity={3} productItems={mockProductItems} handleDelete={mockDelete} />)
-    const deleteBtn = screen.getByRole('button', { name: 'X'})
+    const deleteBtn = screen.getByRole('button')
     await user.click(deleteBtn)
     expect(mockDelete).toHaveBeenCalledWith('123', 35.50, 3)
   })

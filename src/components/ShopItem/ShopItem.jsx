@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   color: var(--text-color);
   background-color: var(--secondary-color-light);
   width: 300px;
-  min-height: 400px;
+  height: 450px;
   margin: 0;
   padding: 0.6rem;
   border-radius: 10px;
@@ -20,15 +20,19 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 1rem;
   @media (max-width: 480px) {
-    width: min(95vw, 300px);
-    min-height: min(95vw, 400px);
+    width: min(90vw, 300px);
+    height: min(90vw, auto);
   }
 `
 
 const StyledImage = styled.img`
-  max-width: 225px;
-  max-height: 225px;
-  object-fit: cover;
+  width: 225px;
+  height: 225px;
+  object-fit: contain;
+  @media (max-width: 480px) {
+    width: min(95vw, 225px);
+    height: min(95vw, 225px);
+  }
 `
 
 const ExtraWrapper = styled.div`

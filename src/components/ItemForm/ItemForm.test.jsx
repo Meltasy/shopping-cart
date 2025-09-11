@@ -9,10 +9,9 @@ describe('Shop item form component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('renders label and input for form', () => {
+  it('renders input for form', () => {
     render(<ItemForm />)
     screen.debug()
-    expect(screen.getByLabelText('Quantity:'))
     expect(screen.getByRole('textbox'))
   })
 
@@ -25,7 +24,7 @@ describe('Shop item form component', () => {
     render(<ItemForm />)
     expect(screen.getAllByRole('button')[0].textContent).toMatch('-')
     expect(screen.getAllByRole('button')[1].textContent).toMatch('+')
-    expect(screen.getAllByRole('button')[2].textContent).toMatch(/add to cart/i)
+    expect(screen.getAllByRole('button')[2].querySelector('svg')).toBeInTheDocument()
   })
 
   it('increases quantity by 1 after button click', async () => {
@@ -33,7 +32,7 @@ describe('Shop item form component', () => {
     const user = userEvent.setup()
     const button = screen.getByRole('button', {name: '+'})
     await user.click(button)
-    expect(screen.getByDisplayValue('1')).toBeInTheDocument()
+    expect(screen.getByDisplayValue('2')).toBeInTheDocument()
   })
 
   it('decreases quantity by 1 after button click, if quantity > 0', async () => {
@@ -43,14 +42,14 @@ describe('Shop item form component', () => {
     const decreaseBtn = screen.getByRole('button', {name: '-'})
     await user.tripleClick(increaseBtn)
     await user.click(decreaseBtn)
-    expect(screen.getByDisplayValue('2')).toBeInTheDocument()
+    expect(screen.getByDisplayValue('3')).toBeInTheDocument()
   })
 
-  it('checks initial value of 0 and updates when user types', async () => {
+  it('checks initial value of 1 and updates when user types', async () => {
     render(<ItemForm />)
     const user = userEvent.setup()
     const input = screen.getByRole('textbox')
-    expect(input.value).toBe('0')
+    expect(input.value).toBe('1')
     await user.type(input, '7')
     expect(input).toHaveValue('7')
   })
@@ -62,7 +61,7 @@ describe('Shop item form calling onSubmit', () => {
     render(<ItemForm itemId='123' price={35.50} onSubmit={mockSubmit} />)
     const user = userEvent.setup()
     const input = screen.getByRole('textbox')
-    const submitBtn = screen.getByRole('button', { name: 'Add to Cart' })
+    const submitBtn = screen.getAllByRole('button')[2]
     await user.clear(input)
     await user.type(input, '3')
     await user.click(submitBtn)
@@ -74,7 +73,10 @@ describe('Shop item form calling onSubmit', () => {
     const mockSubmit = vi.fn()
     render(<ItemForm itemId='123' price={35.50} onSubmit={mockSubmit} />)
     const user = userEvent.setup()
-    const submitBtn = screen.getByRole('button', { name: 'Add to Cart' })
+    const input = screen.getByRole('textbox')
+    const submitBtn = screen.getAllByRole('button')[2]
+    await user.clear(input)
+    await user.type(input, '0')
     await user.click(submitBtn)
     expect(mockSubmit).not.toHaveBeenCalled()
   })

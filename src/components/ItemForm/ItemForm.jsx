@@ -47,29 +47,42 @@ const StyledInput = styled(StyledButton)`
 `
 
 const ItemForm = ({ itemId, price, onSubmit }) => {
-  const [value, setValue] = useState(1)
+  const [value, setValue] = useState('1')
+  const [prevValue, setPrevValue] = useState('1')
 
   function handleChange(e) {
-    setValue(Number(e.currentTarget.value))
+    setValue((e.target.value))
   }
 
   function handleDecrease() {
-    if (Number(value) > 0) setValue(Number(value) - 1)
+    const num = Number(value) || 0
+    if (num > 0) {
+      setValue(String(num - 1))
+      setPrevValue(String(num - 1))
+    }
   }
 
   function handleIncrease() {
-    if (Number(value) < 10) setValue(Number(value) + 1)
+    const num = Number(value) || 0
+    if (num < 10) {
+      setValue(String(num + 1))
+      setPrevValue(String(num + 1))
+    }
+  }
+
+  function handleAdd(e) {
+    e.preventDefault()
+    const num = Number(value)
+    if (!num || num <= 0) return
+    onSubmit(itemId, price, num)
+    setValue('0')
+    setPrevValue('0')
   }
 
   return (
     <>
       <StyledForm
-        onSubmit={(e) => {
-        e.preventDefault()
-        if (value === 0) return
-        onSubmit(itemId, price, value)
-        setValue(0)
-      }}>
+        onSubmit={handleAdd}>
       <div>
         <StyledButton type='button' onClick={handleDecrease}>-</StyledButton>
           <StyledInput as='input'
@@ -81,6 +94,13 @@ const ItemForm = ({ itemId, price, onSubmit }) => {
             pattern='^\d+$'
             value={value}
             onChange={handleChange}
+            onFocus={() => {
+              setPrevValue(value)
+              setValue('')
+            }}
+            onBlur={() => {
+              if (value === '') setValue(prevValue)
+            }}
           />
         <StyledButton type='button' onClick={handleIncrease}>+</StyledButton>
       </div>

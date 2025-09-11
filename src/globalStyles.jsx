@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
-import meriendaBoldWoff from './assets/merienda-bold-webfont.woff'
 import meriendaBoldWoff2 from './assets/merienda-bold-webfont.woff2'
-import meriendaRegularWoff from './assets/merienda-regular-webfont.woff'
-import meriendaRegularWoff2 from './assets/merienda-regular-webfont.woff2'
+import meriendaBoldWoff from './assets/merienda-bold-webfont.woff'
+import panfrescoRegularWoff2 from './assets/panefresco400wtregular-webfont.woff2'
+import panfrescoRegularWoff from './assets/panefresco400wtregular-webfont.woff'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -15,10 +15,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'merienda-regular';
+    font-family: 'panfresco-regular';
     src:
-      url(${meriendaRegularWoff2}) format('woff2'),
-      url(${meriendaRegularWoff}) format('woff');
+      url(${panfrescoRegularWoff2}) format('woff2'),
+      url(${panfrescoRegularWoff}) format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -35,14 +35,14 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: 'merienda-regular', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: panfresco-regular, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 16px;
     color: var(--text-color);
     background-color: var(--background-color);
   }
 
   h1 {
-    font-family: 'merienda-bold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: merienda-bold, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 5rem;
     color: var(--primary-color);
     text-shadow: 2px 2px 2px var(--primary-color-light);
@@ -54,7 +54,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   h2, h3, h4 {
-    font-family: 'merienda-regular', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: panfresco-regular, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
     margin: 0 0.6rem;
   }
 `

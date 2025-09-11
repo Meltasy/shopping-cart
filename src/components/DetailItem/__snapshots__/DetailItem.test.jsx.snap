@@ -3,18 +3,28 @@
 exports[`Shop item detail component > renders shop item detail dialog 1`] = `
 <div>
   <dialog
-    class="sc-FEMpB fROXOS"
+    class="sc-FEMpB hQQwrV"
   >
     <div
-      class="sc-gjcoXW hEnKnr"
+      class="sc-gjcoXW ifkxDl"
     >
-      <h2>
-         €
-        0.00
-      </h2>
+      <div
+        class="sc-dVBluf hrHbBw"
+      >
+        <div
+          class="sc-fLDLck lhfGYe"
+        >
+          <h2 />
+          <h2>
+            €
+            0.00
+          </h2>
+        </div>
+        <div />
+      </div>
       <img
         alt=" "
-        class="sc-dVBluf gNBXRn"
+        class="sc-dycHyt lWfNk"
       />
       <p />
     </div>

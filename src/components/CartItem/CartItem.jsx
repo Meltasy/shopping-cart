@@ -5,7 +5,7 @@ import { mdiBasketRemoveOutline } from '@mdi/js'
 const Wrapper = styled.div`
   color: var(--text-color);
   background-color: var(--secondary-color-light);
-  max-width: 600px;
+  width: 500px;
   height: auto;
   padding: 1rem;
   border-radius: 10px;
@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   align-items: flex-start;
   gap: 1rem;
   @media (max-width: 480px) {
+    width: min(90vw, 275px);
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0;
