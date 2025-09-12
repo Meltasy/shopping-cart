@@ -3,7 +3,7 @@
 exports[`Shop item component > renders shop product item 1`] = `
 <div>
   <div
-    class="sc-jBIHhB ljnGCX"
+    class="sc-jBIHhB gmkjgz"
   >
     <img
       alt=" "
@@ -41,7 +41,7 @@ exports[`Shop item component > renders shop product item 1`] = `
             class="sc-FEMpB hQQwrV"
           >
             <div
-              class="sc-gjcoXW ifkxDl"
+              class="sc-gjcoXW hTUEIs"
             >
               <div
                 class="sc-dVBluf hrHbBw"
@@ -74,7 +74,7 @@ exports[`Shop item component > renders shop product item 1`] = `
               </div>
               <img
                 alt=" "
-                class="sc-dycHyt lWfNk"
+                class="sc-dycHyt hSmkZk"
               />
               <p />
             </div>

@@ -4,6 +4,7 @@
 [![ECMAScript](https://img.shields.io/badge/ECMAScript-2025-blue.svg)](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
 [![Node.js](https://img.shields.io/badge/Node.js-v22.12.0-brightgreen.svg)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-v11.3.0-red.svg)](https://www.npmjs.com/)
+[![Vitest](https://img.shields.io/badge/tests-passing-brightgreen)](https://vitest.dev/)
 [![Repo Size](https://img.shields.io/github/repo-size/Meltasy/shopping-cart)](https://github.com/Meltasy/shopping-cart)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://meltasy-shopping-cart.netlify.app/)
 
@@ -35,7 +36,7 @@ This project was built as part of [The Odin Project](https://www.theodinproject.
 * Vite for fast development and building
 * React Router for client-side routing
 * CSS in JS for styling
-* Vitest and React Testing Library for rigorous testing
+* Jest DOM, Vitest and React Testing Library
 * FakeStore API for product data
 
 ## Local Installation

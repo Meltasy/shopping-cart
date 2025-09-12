@@ -86,7 +86,7 @@ const QuantityCart = styled.div`
   }
 `
 
-const Navbar = ({ quantityCart }) => {
+const Navbar = ({ quantityCart = 0 }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -102,14 +102,14 @@ const Navbar = ({ quantityCart }) => {
     <Wrapper>
       <StyledList>
         <li>
-          <StyledLink to='../home'>Galeries Libellule</StyledLink>
+          <StyledLink to='/home'>Galeries Libellule</StyledLink>
         </li>
         <li>
-          <StyledLink to='../shop'>Shop</StyledLink>
+          <StyledLink to='/shop'>Shop</StyledLink>
         </li>
       </StyledList>
-      <StyledCartLink to='../cart'>
-        <Icon path={mdiBasketOutline} size={isMobile ? 1.5 : 3} />
+      <StyledCartLink to='/cart'>
+        <Icon path={mdiBasketOutline} size={isMobile ? 1.5 : 3} data-testid='cart-icon'/>
         <QuantityCart>{quantityCart}</QuantityCart>
       </StyledCartLink>
     </Wrapper>

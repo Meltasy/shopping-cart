@@ -3,15 +3,15 @@
 exports[`Cart item component > renders cart product items 1`] = `
 <div>
   <div
-    class="sc-FEMpB iANeEj"
+    class="sc-FEMpB LLyhy"
   >
     <img
       alt=" "
-      class="sc-dVBluf ckjbGV"
+      class="sc-dVBluf iZGxt"
       src="fakeImageA.jpg"
     />
     <div
-      class="sc-gjcoXW bUyuKk"
+      class="sc-gjcoXW gLFMeV"
     >
       <h3>
         Fake product A

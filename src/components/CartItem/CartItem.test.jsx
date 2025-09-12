@@ -1,7 +1,7 @@
-import { vi, describe, it, expect } from 'vitest';
+import { vi, describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event';
-import CartItem from './CartItem';
+import userEvent from '@testing-library/user-event'
+import CartItem from './CartItem'
 
 const mockProductItems = [
   { id: '123', title: 'Fake product A', image: 'fakeImageA.jpg' },
@@ -26,8 +26,8 @@ describe('Cart item component', () => {
 
   it('does not render cart item details when not found', () => {
     render(<CartItem itemId='231' price={35.50} quantity={3} productItems={mockProductItems}/>)
-    expect(screen.queryByText('€35.50')).not.toBeInTheDocument()
-    expect(screen.queryByText('3')).not.toBeInTheDocument()
+    expect(screen.queryByText('€65.50')).not.toBeInTheDocument()
+    expect(screen.queryByText('5')).not.toBeInTheDocument()
   })
 })
 

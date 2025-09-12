@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   align-items: flex-start;
   gap: 1rem;
   @media (max-width: 480px) {
-    width: min(90vw, 275px);
+    width: min(95vw, 275px);
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0;
@@ -35,7 +35,7 @@ const EachItem = styled.div`
   }
   @media (max-width: 480px) {
     width: 100%
-    max-width: min(90vw, 250px);
+    max-width: min(95vw, 250px);
     order: 3;
     margin-top: 1rem;
   }
@@ -50,8 +50,8 @@ const StyledImage = styled.img`
     order: 1;
   }
   @media (max-width: 480px) {
-    max-width: min(90vw, 150px);
-    max-height: min(90vw, 200px);
+    max-width: min(95vw, 150px);
+    max-height: min(95vw, 200px);
     order: 1;
   }
 `

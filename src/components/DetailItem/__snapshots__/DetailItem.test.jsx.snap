@@ -6,7 +6,7 @@ exports[`Shop item detail component > renders shop item detail dialog 1`] = `
     class="sc-FEMpB hQQwrV"
   >
     <div
-      class="sc-gjcoXW ifkxDl"
+      class="sc-gjcoXW hTUEIs"
     >
       <div
         class="sc-dVBluf hrHbBw"
@@ -24,7 +24,7 @@ exports[`Shop item detail component > renders shop item detail dialog 1`] = `
       </div>
       <img
         alt=" "
-        class="sc-dycHyt lWfNk"
+        class="sc-dycHyt hSmkZk"
       />
       <p />
     </div>

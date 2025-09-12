@@ -1,6 +1,6 @@
-import { vi, describe, it, expect } from 'vitest';
+import { vi, describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import DetailItem from './DetailItem';
+import DetailItem from './DetailItem'
 
 describe('Shop item detail component', () => {
   it('renders shop item detail dialog', () => {

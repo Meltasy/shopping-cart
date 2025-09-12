@@ -6,10 +6,10 @@ exports[`Home component > renders galeries libellule 1`] = `
     Galeries Libellule
   </h1>
   <div
-    class="sc-dVBluf efKmbz"
+    class="sc-dVBluf gdsbCn"
   >
     <div
-      class="sc-gjcoXW bmUqZt"
+      class="sc-gjcoXW ebULRp"
     >
       <svg
         fill="var(--primary-color)"
@@ -49,7 +49,7 @@ exports[`Home component > renders galeries libellule 1`] = `
     class="sc-fLDLck kzQnhg"
   >
     <div
-      class="sc-dycHyt gSKICU"
+      class="sc-dycHyt cioryo"
     >
       <img
         alt="Fake product A"
@@ -71,7 +71,7 @@ exports[`Home component > renders galeries libellule 1`] = `
       />
     </div>
     <div
-      class="sc-dycHyt gSKICU"
+      class="sc-dycHyt cioryo"
     >
       <img
         alt="Fake product A"
@@ -93,7 +93,7 @@ exports[`Home component > renders galeries libellule 1`] = `
       />
     </div>
     <div
-      class="sc-dycHyt gSKICU"
+      class="sc-dycHyt cioryo"
     >
       <img
         alt="Fake product A"

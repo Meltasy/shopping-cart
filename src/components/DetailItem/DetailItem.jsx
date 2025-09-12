@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 0.6rem;
   @media (max-width: 480px) {
-    max-width: min(90vw, 250px);
+    max-width: min(95vw, 250px);
     gap: 0.3rem;
   }
 `
@@ -52,8 +52,8 @@ const StyledImage = styled.img`
   object-fit: cover;
   border-radius: 10px;
   @media (max-width: 480px) {
-    max-width: min(90vw, 200px);
-    max-height: min(90vw, 200px);
+    max-width: min(95vw, 200px);
+    max-height: min(95vw, 200px);
   }
 `
 

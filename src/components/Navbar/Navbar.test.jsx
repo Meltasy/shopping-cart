@@ -1,7 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom';
-import userEvent from '@testing-library/user-event'
+import { BrowserRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 
 describe('Navbar component', () => {
@@ -12,44 +11,29 @@ describe('Navbar component', () => {
       </BrowserRouter>
     )
     screen.debug()
-    expect(screen.getAllByRole('link')[0].textContent).toMatch(/galeries libellule/i)
-    expect(screen.getAllByRole('link')[1].textContent).toMatch(/shop/i)
-    expect(screen.getAllByRole('link')[2].textContent).toMatch('')
+    expect(screen.getByRole('link', { name: /galeries libellule/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /shop/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: '0' })).toBeInTheDocument()
+    expect(screen.getByTestId('cart-icon')).toBeInTheDocument()
   })
 
-  it('links to the shop page', async () => {
+  it('links have the correct href attributes', () => {
     render(
       <BrowserRouter>
         <Navbar />
       </BrowserRouter>
     )
-    const user = userEvent.setup()
-    const shopButton = screen.getByRole('link', { name: /shop/i, })
-    await user.click(shopButton)
-    expect(window.location.href).toMatch(/\/shop/)
+    expect(screen.getByRole('link', { name: /galeries libellule/i })).toHaveAttribute('href', '/home')
+    expect(screen.getByRole('link', { name: /shop/i })).toHaveAttribute('href', '/shop')
+    expect(screen.getByRole('link', { name: '0' })).toHaveAttribute('href', '/cart')
   })
 
-  it('links to the home page', async () => {
+  it('displays the cart quantity when provided', () => {
     render(
       <BrowserRouter>
-        <Navbar />
+        <Navbar quantityCart={5} />
       </BrowserRouter>
     )
-    const user = userEvent.setup()
-    const homeButton = screen.getByRole('link', { name: /galeries libellule/i, })
-    await user.click(homeButton)
-    expect(window.location.href).toMatch(/\/home/)
-  })
-
-  it('links to the cart page', async () => {
-    render(
-      <BrowserRouter>
-        <Navbar />
-      </BrowserRouter>
-    )
-    const user = userEvent.setup()
-    const cartButton = screen.getByRole('link', { name: '', })
-    await user.click(cartButton)
-    expect(window.location.href).toMatch(/\/cart/)
+    expect(screen.getByText('5')).toBeInTheDocument()
   })
 })

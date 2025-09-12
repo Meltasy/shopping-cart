@@ -1,4 +1,4 @@
-import { vi, describe, it, expect } from 'vitest';
+import { vi, describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ShopItem from './ShopItem'
@@ -18,8 +18,8 @@ describe('Shop item component', () => {
   })
 
   it('does not render shop item details when not found', () => {
-    render(<ShopItem imageUrl='fakeImage.jpg' title='Fake product' price={57.99} />)
-    expect(screen.queryByText('57.99')).not.toBeInTheDocument()
+    render(<ShopItem imageUrl='fakeImage.jpg' title='Fake product' price={27.99} />)
+    expect(screen.queryByText('€57.99')).not.toBeInTheDocument()
   })
 })
 

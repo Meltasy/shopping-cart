@@ -12,13 +12,13 @@ const Wing = styled.g`
   animation: ${flap} 0.5s ease-in-out 20;
 `
 
-const Dragonfly = ({ color = 'var(--primary-color)', width = 75, height = 75 }) => {
+const Dragonfly = ({ color = 'var(--primary-color)', size = 75 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill={color}
-      width={width}
-      height ={height}
+      width={size}
+      height ={size}
       viewBox="0 0 512 512"
       role="img"
       focusable="false"

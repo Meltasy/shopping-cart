@@ -24,43 +24,63 @@ const flyIn = keyframes`
     opacity: 0.5;
   }
   25% {
-    transform: translateX(-150%) translateY(80%) rotate(70deg);
-    opacity: 0.75;
+    transform: translateX(-150%) translateY(80%) rotate(65deg);
+    opacity: 0.6;
   }
   30% {
-    transform: translateX(0%) translateY(50%) rotate(60deg);
+    transform: translateX(0%) translateY(50%) rotate(50deg);
     opacity: 0.75;
   }
+  35% {
+    transform: translateX(40%) translateY(25%) rotate(35deg);
+    opacity: 0.85;
+  }
   40% {
-    transform: rotate(-30deg) translateX(100px) rotate(30deg);
+    transform: rotate(-30deg) translateX(80%) rotate(20deg);
     opacity: 1;
   }
   45% {
-    transform: rotate(-60deg) translateX(150px) rotate(10deg);
+    transform: rotate(-60deg) translateX(120%) rotate(10deg);
     opacity: 1;
   }
   50% {
-    transform: rotate(-90deg) translateX(200px) rotate(-10deg);
+    transform: rotate(-90deg) translateX(160%) rotate(0deg);
+    opacity: 1;
+  }
+  55% {
+    transform: rotate(-135deg) translateX(200%) rotate(-10deg);
     opacity: 1;
   }
   60% {
-    transform: rotate(-180deg) translateX(180px) rotate(-30deg);
+    transform: rotate(-180deg) translateX(240%) rotate(-20deg);
+    opacity: 1;
+  }
+  65% {
+    transform: rotate(-225deg) translateX(200%) rotate(-30deg);
     opacity: 1;
   }
   70% {
-    transform: rotate(-270deg) translateX(160px) rotate(-40deg);
+    transform: rotate(-270deg) translateX(160%) rotate(-40deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(-300deg) translateX(120%) rotate(-50deg);
     opacity: 1;
   }
   80% {
-    transform: rotate(-330deg) translateX(140px) rotate(-50deg);
+    transform: rotate(-330deg) translateX(80%) rotate(-60deg);
     opacity: 1;
   }
   85% {
-    transform: rotate(-340deg) translateX(120px) rotate(-60deg);
+    transform: rotate(-340deg) translateX(60%) rotate(-70deg);
     opacity: 1;
   }
   90% {
-    transform: translateX(20%) translateY(10%) rotate(-75deg);
+    transform: translateX(40%) translateY(10%) rotate(-75deg);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(20%) translateY(5%) rotate(-80deg);
     opacity: 1;
   }
   100% {
@@ -79,7 +99,6 @@ const DragonFlyWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // animation: ${flyIn} 10s ease-out forwards;
 `
 
 const Wrapper = styled.div`
@@ -101,8 +120,8 @@ const ImageWrapper = styled.div`
   width: 500px;
   height: 500px;
   @media (max-width: 480px) {
-    width: min(90vw, 250px);
-    height: min(90vw, 250px);
+    width: min(95vw, 250px);
+    height: min(95vw, 250px);
   }
 `
 
@@ -122,6 +141,7 @@ const StyledImage = styled.img`
 
 const Home = ({ productItems }) => {
   const [currentImages, setCurrentImages] = useState([0, 1, 2])
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -133,12 +153,21 @@ const Home = ({ productItems }) => {
     return () => clearInterval(interval)
   }, [productItems.length])
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 480)
+    }
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+    return () => window.removeEventListener('resize', checkScreenSize)
+  }, [])
+
   return (
     <>
       <h1>Galeries Libellule</h1>
       <DragonFlyWrapper>
         <CirclePath>
-          <Dragonfly />
+          <Dragonfly size={isMobile ? 45 : 75}/>
         </CirclePath>
       </DragonFlyWrapper>
       <Wrapper>
