@@ -37,7 +37,6 @@ function App() {
       return response.json()
     })
     .then((response) => {
-      console.log(response)
       setProductItems(response)
     })
     .catch((error) => setError(error))
