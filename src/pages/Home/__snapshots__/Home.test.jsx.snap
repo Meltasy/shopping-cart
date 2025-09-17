@@ -46,10 +46,10 @@ exports[`Home component > renders galeries libellule 1`] = `
     </div>
   </div>
   <div
-    class="sc-fLDLck kzQnhg"
+    class="sc-fLDLck coJTRa"
   >
     <div
-      class="sc-dycHyt cioryo"
+      class="sc-dycHyt hduGIw"
     >
       <img
         alt="Fake product A"
@@ -71,7 +71,7 @@ exports[`Home component > renders galeries libellule 1`] = `
       />
     </div>
     <div
-      class="sc-dycHyt cioryo"
+      class="sc-dycHyt hduGIw"
     >
       <img
         alt="Fake product A"
@@ -93,7 +93,7 @@ exports[`Home component > renders galeries libellule 1`] = `
       />
     </div>
     <div
-      class="sc-dycHyt cioryo"
+      class="sc-dycHyt hduGIw"
     >
       <img
         alt="Fake product A"

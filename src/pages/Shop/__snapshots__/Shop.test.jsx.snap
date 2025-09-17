@@ -6,7 +6,7 @@ exports[`Shop component > renders shop products 1`] = `
     Products
   </h1>
   <div
-    class="sc-dkBYrC frIrcj"
+    class="sc-dkBYrC jZGkyX"
   >
     <label
       for="category"
@@ -38,7 +38,7 @@ exports[`Shop component > renders shop products 1`] = `
     class="sc-jZTQcj gyxmry"
   >
     <div
-      class="sc-jBIHhB loGoFA"
+      class="sc-jBIHhB hEbloA"
     >
       <img
         alt=" "
@@ -46,7 +46,7 @@ exports[`Shop component > renders shop products 1`] = `
         src="fakeImageA.jpg"
       />
       <div
-        class="sc-jUkaYT bHrHaU"
+        class="sc-jUkaYT iEoWa"
       >
         <h3>
           Fake product A
@@ -170,7 +170,7 @@ exports[`Shop component > renders shop products 1`] = `
       </div>
     </div>
     <div
-      class="sc-jBIHhB loGoFA"
+      class="sc-jBIHhB hEbloA"
     >
       <img
         alt=" "
@@ -178,7 +178,7 @@ exports[`Shop component > renders shop products 1`] = `
         src="fakeImageB.jpg"
       />
       <div
-        class="sc-jUkaYT bHrHaU"
+        class="sc-jUkaYT iEoWa"
       >
         <h3>
           Fake product B
@@ -302,7 +302,7 @@ exports[`Shop component > renders shop products 1`] = `
       </div>
     </div>
     <div
-      class="sc-jBIHhB loGoFA"
+      class="sc-jBIHhB hEbloA"
     >
       <img
         alt=" "
@@ -310,7 +310,7 @@ exports[`Shop component > renders shop products 1`] = `
         src="fakeImageC.jpg"
       />
       <div
-        class="sc-jUkaYT bHrHaU"
+        class="sc-jUkaYT iEoWa"
       >
         <h3>
           Fake product C

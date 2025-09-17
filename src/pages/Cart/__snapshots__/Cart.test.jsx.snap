@@ -9,10 +9,10 @@ exports[`Cart component > renders cart products 1`] = `
     class="sc-gNZgCX hsXkwd"
   >
     <div
-      class="sc-kfeOyU gTOnNz"
+      class="sc-kfeOyU ipaoli"
     >
       <div
-        class="sc-FEMpB LLyhy"
+        class="sc-FEMpB bxGfmc"
       >
         <img
           alt=" "
@@ -59,7 +59,7 @@ exports[`Cart component > renders cart products 1`] = `
         </button>
       </div>
       <div
-        class="sc-FEMpB LLyhy"
+        class="sc-FEMpB bxGfmc"
       >
         <img
           alt=" "
@@ -107,7 +107,7 @@ exports[`Cart component > renders cart products 1`] = `
       </div>
     </div>
     <div
-      class="sc-jBIHhB lgsESy"
+      class="sc-jBIHhB gABNgi"
     >
       <h3>
         Subtotal: €

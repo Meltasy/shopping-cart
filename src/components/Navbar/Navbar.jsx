@@ -57,7 +57,7 @@ const StyledLink = styled(NavLink)`
 const StyledCartLink = styled(NavLink)`
   ${linkStyles}
   position: relative;
-  margin: 0 2rem;
+  margin: 0 1rem;
 `
 
 const QuantityCart = styled.div`
