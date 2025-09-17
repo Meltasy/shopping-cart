@@ -3,11 +3,11 @@
 exports[`Cart item component > renders cart product items 1`] = `
 <div>
   <div
-    class="sc-FEMpB bxGfmc"
+    class="sc-FEMpB hKpOPF"
   >
     <img
       alt=" "
-      class="sc-dVBluf iZGxt"
+      class="sc-dVBluf kbQQZc"
       src="fakeImageA.jpg"
     />
     <div

@@ -12,11 +12,11 @@ exports[`Cart component > renders cart products 1`] = `
       class="sc-kfeOyU ipaoli"
     >
       <div
-        class="sc-FEMpB bxGfmc"
+        class="sc-FEMpB hKpOPF"
       >
         <img
           alt=" "
-          class="sc-dVBluf iZGxt"
+          class="sc-dVBluf kbQQZc"
           src="fakeImageA.jpg"
         />
         <div
@@ -59,11 +59,11 @@ exports[`Cart component > renders cart products 1`] = `
         </button>
       </div>
       <div
-        class="sc-FEMpB bxGfmc"
+        class="sc-FEMpB hKpOPF"
       >
         <img
           alt=" "
-          class="sc-dVBluf iZGxt"
+          class="sc-dVBluf kbQQZc"
           src="fakeImageC.jpg"
         />
         <div
