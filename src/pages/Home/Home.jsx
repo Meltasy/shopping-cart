@@ -112,6 +112,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: space-around;
+    margin: 0 1rem;
   }
 `
 
@@ -120,8 +121,8 @@ const ImageWrapper = styled.div`
   width: 500px;
   height: 500px;
   @media (max-width: 480px) {
-    width: min(95vw, 250px);
-    height: min(95vw, 250px);
+    width: min(95vw, 400px);
+    height: min(95vw, 400px);
   }
 `
 

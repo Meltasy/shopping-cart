@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   align-items: flex-start;
   gap: 1rem;
   @media (max-width: 480px) {
-    width: min(95vw, 275px);
+    width: min(95vw, 350px);
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0;

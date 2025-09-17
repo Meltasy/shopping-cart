@@ -16,12 +16,12 @@ const Wrapper = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
   @media (max-width: 480px) {
-    width: min(95vw, 400px);
-    height: min(95vw, auto);
+    width: min(95vw, 300px);
+    height: auto;
   }
 `
 
@@ -39,7 +39,7 @@ const ExtraWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   gap: 0.6rem;
   @media (max-width: 480px) {

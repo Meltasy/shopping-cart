@@ -21,7 +21,6 @@ const CartItems = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
 `
 
 const EmptyMessage = styled.div`
@@ -34,7 +33,6 @@ const EmptyMessage = styled.div`
 const Total = styled.div`
   max-width: 400px;
   height: min-content;
-  margin-top: 1rem;
   padding: 1rem;
   color: var(--text-color);
   background-color: var(--secondary-color-light);

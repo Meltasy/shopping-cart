@@ -18,7 +18,7 @@ const Wrapper = styled.nav`
   align-items: center;
   overflow: hidden;
   @media (max-width: 480px) {
-    height: 3.5rem;
+    height: 4rem;
   }
 `
 
