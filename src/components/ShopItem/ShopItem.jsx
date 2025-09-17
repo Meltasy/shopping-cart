@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 1rem;
   @media (max-width: 480px) {
-    width: min(95vw, 300px);
+    width: min(95vw, 400px);
     height: min(95vw, auto);
   }
 `

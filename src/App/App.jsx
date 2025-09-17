@@ -10,12 +10,13 @@ import Cart from '../pages/Cart/Cart'
 
 const AppWrapper = styled.div`
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 `
 
 const MainWrapper = styled.main`
-  margin-top: 3rem;
+  margin-top: 5rem;
   flex: 1;
 `
 

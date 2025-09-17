@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const StyledDialog = styled.dialog`
+  margin: auto;
   padding: 0;
   border: none;
   border-radius: 10px;
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 0.6rem;
   @media (max-width: 480px) {
-    max-width: min(95vw, 250px);
+    max-width: min(95vw, 350px);
     gap: 0.3rem;
   }
 `

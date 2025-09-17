@@ -13,7 +13,7 @@ exports[`Shop item form component > renders shop item form 1`] = `
         -
       </button>
       <input
-        class="sc-gjcoXW sc-fLDLck IUUBp bHhTra"
+        class="sc-gjcoXW sc-fLDLck IUUBp jufUZl"
         id="quantity"
         max="10"
         min="1"

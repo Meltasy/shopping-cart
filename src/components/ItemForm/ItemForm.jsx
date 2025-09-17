@@ -43,7 +43,7 @@ const StyledIconButton = styled.button`
 `
 
 const StyledInput = styled(StyledButton)`
-  max-width: 1rem;
+  max-width: 2rem;
 `
 
 const ItemForm = ({ itemId, price, onSubmit }) => {

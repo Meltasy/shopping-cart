@@ -3,7 +3,7 @@
 exports[`Shop item component > renders shop product item 1`] = `
 <div>
   <div
-    class="sc-jBIHhB gmkjgz"
+    class="sc-jBIHhB loGoFA"
   >
     <img
       alt=" "
@@ -38,10 +38,10 @@ exports[`Shop item component > renders shop product item 1`] = `
             </svg>
           </button>
           <dialog
-            class="sc-FEMpB hQQwrV"
+            class="sc-FEMpB hjZXnf"
           >
             <div
-              class="sc-gjcoXW hTUEIs"
+              class="sc-gjcoXW hKdEaB"
             >
               <div
                 class="sc-dVBluf hrHbBw"
@@ -91,7 +91,7 @@ exports[`Shop item component > renders shop product item 1`] = `
               -
             </button>
             <input
-              class="sc-gNZgCX sc-hRDKVd iwZfDw hrYMlT"
+              class="sc-gNZgCX sc-hRDKVd iwZfDw eYnWSA"
               id="quantity"
               max="10"
               min="1"

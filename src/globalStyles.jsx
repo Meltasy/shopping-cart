@@ -33,6 +33,18 @@ const GlobalStyle = createGlobalStyle`
     --secondary-color-light: rgb(232, 232, 232);
     --secondary-color-dark: rgb(80, 80, 80);
   }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
   
   body {
     font-family: panfresco-regular, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
