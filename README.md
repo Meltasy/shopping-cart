@@ -41,7 +41,7 @@ This project was built as part of [The Odin Project](https://www.theodinproject.
 
 ## Local Installation
 
-Prerequisite: Node.js v22.19.0
+Prerequisite: Node.js v22.12.0
 
 1. Clone the repository: `git clone git@github.com:Meltasy/shopping-cart.git`
 2. Set up the frontend: `cd shopping-cart` and `npm install`
